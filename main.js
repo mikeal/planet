@@ -179,6 +179,7 @@ function HTTPFile (path, headers) {
 
 function run (port) {
   var assets;
+  setupBuildDir(path.join(__dirname, 'build'))
   createAssets(configpath, function (a) {
     assets = a
     http.createServer(function (req, resp) {
