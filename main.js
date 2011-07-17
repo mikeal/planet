@@ -122,8 +122,10 @@ function createAssets (configpath, cb) {
         files.forEach(function (info) {
           config.posts.push(JSON.parse(info[1].toString()))
         })
-        config.pubDate = config.posts[0].pubDate;
-        config.rfc822 = config.posts[0].rfc822;
+        if (config.posts.length) {
+          config.pubDate = config.posts[0].pubDate;
+          config.rfc822 = config.posts[0].rfc822;
+        }
         config.sitesArray = []
         for (site in config.sites) {
           config.sites[site].name = site
