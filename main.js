@@ -217,7 +217,7 @@ function run (port) {
       })
     }) 
   }
-  setTimeout(interval, 1000 * 60 * 10)
+  setTimeout(interval, 1000 * 30)
   
   // for debugging
   setInterval(function () {
