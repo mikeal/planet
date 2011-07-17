@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
+}
+
+body { 
+  font-family: PT Sans, arial, serif;
+  text-align: center; 
+  margin: 0 0 0 0; 
+  vertical-align: middle; 
+}
+
+div#feedlink {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+
+div#title {
+  width:100%;
+  font-size:40px;
+  text-align:center;
+  margin-bottom:25px;
+  margin-top:10px;
+}
+
+div#container {
+  margin: 0 auto;
+  width: 760px; 
+  text-align: left; 
+  margin: 0 auto;
+}
+
+div#posts {
+  float:left;
+  width:500px;
+  margin-left:50px;
+}
+
+div#links {
+  float:left;
+  margin-left:30px;
+  width:100px;
+}
+
+div.post {
+  margin-bottom:50px;
+}
+
+div.post-title {
+  font-size:140%;
+}
+
+div#sites-title {
+  font-size:110%;
+  margin-bottom:5px;
+}
+
+span.post-displayDate, span.byline {
+  font-size:70%;
+}
+

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>{{title}}</title>
+		<link>{{url}}</link>
+		<description>{{description}}</description>
+		<language>en-us</language>
+		<copyright>Copyright 2011 Mikeal Rogers</copyright>
+		<pubDate>{{rfc822}}</pubDate>
+		<lastBuildDate>{{rfc822}}</lastBuildDate>
+		<docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+		<generator>github://mikeal/planet</generator>
+		<managingEditor>{{editorEmail}}</managingEditor>
+		<webMaster>{{editorEmail}}</webMaster>
+	  {{#posts}}
+	  <item>
+	    <title>{{title}}</title>
+			<link>{{link}}</link>
+			<guid>{{guid}}</guid>
+			<description>
+			  {{description}}
+			</description>
+			<pubDate>{{rfc822}}</pubDate>
+	  </item>
+	  {{/posts}}
+  </channel>
+</rss>

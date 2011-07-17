@@ -1,0 +1,16 @@
+{ 
+  "sites": {
+    "mikeal": {
+      "feed": "http://www.mikealrogers.com/site.rss",
+      "author": "Mikeal Rogers",
+      "link": "http://www.mikealrogers.com"
+    }
+  },
+  "title": "Planet node.js",
+  "tags": [ "node","nodejs","planet","javascript","developer","node.js","community" ],
+  "url": "http://www.planetnodejs.com",
+  "image": "http://nodejs.org/logo.png",
+  "description": "Community blog aggregator for node.js",
+  "editorEmail": "mikeal.rogers@gmail.com",
+  "css": "./site.css"
+}
