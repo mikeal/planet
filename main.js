@@ -84,6 +84,8 @@ function readFiles (files, cb) {
     , counter = 0
     , ret = []
     ;
+    
+  if (files.length === 0) cb([]) 
   files.forEach(function (f) {
     counter++
     fs.readFile(f, function (err, d) {
