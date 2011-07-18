@@ -44,6 +44,11 @@
       "feed": "http://www.sauria.com/blog/feed/",
       "author": "Ted Leung",
       "link": "http://www.sauria.com/blog/"
+    },
+    "Bocoup": {
+      "feed": "http://weblog.bocoup.com/feed",
+      "author": "Bocoup",
+      "link": "http://weblog.bocoup.com"
     }
   },
   "title": "Planet node.js",
