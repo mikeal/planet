@@ -19,6 +19,11 @@
       "feed": "http://blog.nodejitsu.com/feed.xml",
       "author": "Ninjas",
       "link": "http://blog.nodejitsu.com"
+    },
+    "node knockout": {
+      "feed": "http://nodeknockout.posterous.com/rss.xml",
+      "author": "Node KO",
+      "link": "http://nodeknockout.posterous.community"
     }
   },
   "title": "Planet node.js",
