@@ -116,6 +116,8 @@ function createAssets (configpath, builddir, cb) {
       ;
   
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
+	  if(err) throw err;
+
       files.sort()
       files.reverse()
       files = files.slice(0, 10).map(function (p) {return path.join(builddir, 'db', p)})
