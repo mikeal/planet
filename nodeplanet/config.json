@@ -49,6 +49,11 @@
       "feed": "http://weblog.bocoup.com/feed",
       "author": "Bocoup",
       "link": "http://weblog.bocoup.com"
+    },
+    "بلاگ ند": {
+      "feed": "http://io.kodfabrik.com/atom.xml",
+      "autor": "Morteza Milani",
+      "link": "http://io.kodfabrik.com"
     }
   },
   "title": "Planet node.js",
