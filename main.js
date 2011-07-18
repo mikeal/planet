@@ -24,7 +24,7 @@ function build (name, blog, builddir, cb) {
   var feed = feedstream.get(blog.feed)
   var counter = 1
   feed.on('post', function (post) {
-    if (!post.pubDate) return;
+    if (!post.pubDate || !post.pubDate.toISOString) return;
     post.isoTimestamp = post.pubDate.toISOString()
     post._id = post.isoTimestamp + '-' + name 
     post.site = blog
