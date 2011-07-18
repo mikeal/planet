@@ -108,14 +108,14 @@ var configpath = 'nodeplanet/config.json'
   
 var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(__dirname, 'templates', 'rss.mustache')];
 
-function createAssets (configpath, cb) {
+function createAssets (configpath, builddir, cb) {
   readFiles(templates, function (files) {
     var config = getconfig(configpath)
       , indextemplate = files[0][1].toString()
       , rsstemplate = files[1][1].toString()
       ;
   
-    fs.readdir(path.join(__dirname, 'build', 'db'), function (err, files) {
+    fs.readdir(path.join(builddir, 'db'), function (err, files) {
       files.sort()
       files.reverse()
       files = files.slice(0, 10).map(function (p) {return path.join(__dirname, 'build', 'db', p)})
@@ -184,7 +184,7 @@ function HTTPFile (path, headers) {
 function run (port, builddir) {
   var assets;
   setupBuildDir(builddir)
-  createAssets(configpath, function (a) {
+  createAssets(configpath, builddir, function (a) {
     assets = a
     http.createServer(function (req, resp) {
       if (req.url === '/') {
@@ -211,7 +211,7 @@ function run (port, builddir) {
   var interval = function () {
     fullbuild(getconfig(configpath), builddir,  function () {
       console.log('regenerated from hosts')
-      createAssets(configpath, function (a) {
+      createAssets(configpath, builddir, function (a) {
         assets = a
         setTimeout(interval, 1000 * 60 * 10)
       })
@@ -221,7 +221,7 @@ function run (port, builddir) {
   
   // for debugging
   setInterval(function () {
-    createAssets(configpath, function (a) {
+    createAssets(configpath, builddir, function (a) {
       assets = a
     })
   }, 500)
