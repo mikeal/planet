@@ -23,7 +23,7 @@
     "node knockout": {
       "feed": "http://nodeknockout.posterous.com/rss.xml",
       "author": "Node KO",
-      "link": "http://nodeknockout.posterous.community"
+      "link": "http://nodeknockout.posterous.com"
     },
     "node blog": {
       "feed": "http://blog.nodejs.org/feed/",
