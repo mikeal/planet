@@ -39,6 +39,11 @@
       "feed": "http://marcorogers.com/blog/rss",
       "author": "Marco Rogers",
       "link": "http://marcorogers.com/blog"
+    },
+    "Ted Leung": {
+      "feed": "http://www.sauria.com/blog/feed/",
+      "author": "Ted Leung",
+      "link": "http://www.sauria.com/blog/"
     }
   },
   "title": "Planet node.js",
