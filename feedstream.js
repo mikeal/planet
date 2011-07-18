@@ -24,10 +24,16 @@ function FeedStream (strict) {
                 post[node.name] += text;
               }
               parser.onclosetag = function () {
-                if (node.name === 'pubDate' || node.name === 'lastBuildDate') {
+                if ((node.name === 'pubDate' || node.name === 'lastBuildDate') && typeof post[node.name] === 'string' ) {
                   // Turn known datetime elements in to Date objects
-                  post[node.name] = Date.parse(post[node.name]);
-                  post.rfc822 = rfc822.getRFC822Date(post[node.name])
+                  if (Date.parse(post[node.name])) {
+                    post[node.name] = Date.parse(post[node.name])
+                    post.rfc822 = rfc822.getRFC822Date(post[node.name])
+                  } else {
+                    // Hack: if we can't parse the date just assume it's proper format
+                    post.rfc822 = post[node.name]
+                  }
+                  
                 }
                 parser.ontext = null;
                 parser.onclosetag = onclosetag

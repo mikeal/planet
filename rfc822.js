@@ -1,5 +1,7 @@
 // Support for rfc822, worst standard EVAR!
 
+require('./date')
+
 function getRFC822Date(oDate)
 {
   var aMonths = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", 

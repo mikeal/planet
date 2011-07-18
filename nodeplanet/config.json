@@ -4,6 +4,11 @@
       "feed": "http://www.mikealrogers.com/site.rss",
       "author": "Mikeal Rogers",
       "link": "http://www.mikealrogers.com"
+    },
+    "isaacs": {
+      "feed": "http://blog.izs.me/rss",
+      "author": "Issac Schlueter",
+      "link": "http://blog.izs.me"
     }
   },
   "title": "Planet node.js",
