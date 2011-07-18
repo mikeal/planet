@@ -14,6 +14,11 @@
       "feed": "http://io.kodfabrik.com/atom.xml",
       "author": "Azer Koculu",
       "link": "http://io.kodfabrik.com" 
+    },
+    "nodejitsu": {
+      "feed": "http://blog.nodejitsu.com/feed.xml",
+      "author": "Ninjas",
+      "link": "http://blog.nodejitsu.com"
     }
   },
   "title": "Planet node.js",
