@@ -220,11 +220,11 @@ function run (port, builddir) {
   setTimeout(interval, 1000 * 30)
   
   // for debugging
-  setInterval(function () {
-    createAssets(configpath, builddir, function (a) {
-      assets = a
-    })
-  }, 500)
+  // setInterval(function () {
+  //   createAssets(configpath, builddir, function (a) {
+  //     assets = a
+  //   })
+  // }, 500)
 }
 
 exports.run = run;
