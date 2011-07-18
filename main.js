@@ -181,9 +181,9 @@ function HTTPFile (path, headers) {
   self.headers = headers
 }
 
-function run (port) {
+function run (port, builddir) {
   var assets;
-  setupBuildDir(path.join(__dirname, 'build'))
+  setupBuildDir(builddir)
   createAssets(configpath, function (a) {
     assets = a
     http.createServer(function (req, resp) {
@@ -209,7 +209,7 @@ function run (port) {
   })
   
   var interval = function () {
-    fullbuild(getconfig(configpath), path.join(__dirname, 'build'),  function () {
+    fullbuild(getconfig(configpath), builddir,  function () {
       console.log('regenerated from hosts')
       createAssets(configpath, function (a) {
         assets = a

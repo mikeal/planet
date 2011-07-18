@@ -1,1 +1,1 @@
-require('./main').run(80)
+require('./main').run(80, '/home/node/planetbuild');
