@@ -24,6 +24,11 @@
       "feed": "http://nodeknockout.posterous.com/rss.xml",
       "author": "Node KO",
       "link": "http://nodeknockout.posterous.community"
+    },
+    "node blog": {
+      "feed": "http://blog.nodejs.org/feed/",
+      "author": "Joyent",
+      "link": "http://blog.nodejs.org/"
     }
   },
   "title": "Planet node.js",

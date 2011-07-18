@@ -23,8 +23,13 @@ function FeedStream (strict) {
             var post = {};
             parser.onopentag = function (node) {
               post[node.name] = ''
+              var cdata = false;
               parser.ontext = function (text) {
                 post[node.name] += text;
+              }
+              parser.oncdata = function (text) {
+                post[node.name] += text;
+                cdata = true
               }
               parser.onclosetag = function () {
                 if ((node.name === 'pubDate' || node.name === 'lastBuildDate') && typeof post[node.name] === 'string' ) {
@@ -36,6 +41,9 @@ function FeedStream (strict) {
                     // Hack: if we can't parse the date just assume it's proper format
                     post.rfc822 = post[node.name]
                   }
+                  if (cdata) {
+                    post[node.name] = escape(post[node.name])
+                  }
                   
                 }
                 parser.ontext = null;
@@ -44,6 +52,9 @@ function FeedStream (strict) {
             }
             var onclosetag = function (name) {
               if (name === 'item') {
+                if (!post.guid) {
+                  post.guid = post.link
+                }
                 self.emit('post', post)
                 parser.onopentag = function (node) {
                   if (node.name === 'item') itemlistener()
