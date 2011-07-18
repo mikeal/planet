@@ -1,6 +1,7 @@
 var fs = require('fs')
   , path = require('path')
   , assert = require('assert')
+  , events = require('events')
   , stream = require('stream')
   , util = require('util')
   , http = require('http')
@@ -158,21 +159,20 @@ function HTTPBuffer (buffer, headers) {
   self.headers['content-length'] = buffer.length
   self.headers['last-modified'] = rfc822.getRFC822Date(self.created)
   self.headers['etag'] = self.md5
-  self.on('pipe', function (source) {
-    self.req = source
-    assert.ok(self.req.method !== 'PUT' && self.req.method !== 'POST')
+  self.on('request', function (req, resp) {
+    if (req.method === 'PUT' || req.method === 'POST') {
+      resp.writeHead(405)
+      resp.end()
+      return
+    }
+    resp.writeHead(200, this.headers);
+    if (!req.method !== 'HEAD') {
+      resp.write(this.buffer)
+    }
+    resp.end()
   })
 }
-util.inherits(HTTPBuffer, stream.Stream)
-HTTPBuffer.prototype.pipe = function (dest) {
-  dest.writeHead(200, this.headers)
-  // stream.Stream.prototype.pipe.call(this, dest)
-  // this.emit('data', this.buffer)
-  // this.emit('end')
-  dest.end(this.buffer)
-}
-HTTPBuffer.prototype.write = function () {}
-HTTPBuffer.prototype.end = function () {}
+util.inherits(HTTPBuffer, events.EventEmitter)
 
 function HTTPFile (path, headers) {
   var self = this
@@ -189,20 +189,16 @@ function run (port, builddir) {
     assets = a
     http.createServer(function (req, resp) {
       if (req.url === '/') {
-        req.pipe(assets.index)
-        assets.index.pipe(resp)
-        return
+        return assets.index.emit('request', req, resp)
       }
       if (req.url === '/site.rss') {
-        req.pipe(assets.rss)
-        assets.rss.pipe(resp)
-        return
+        return assets.rss.emit('request', req, resp)
       }
-      if (req.url === '/date.js') {
-        req.pipe(assets.datejs)
-        assets.datejs.pipe(resp)
-        return
-      }
+      // if (req.url === '/date.js') {
+      //         req.pipe(assets.datejs)
+      //         assets.datejs.pipe(resp)
+      //         return 
+      //       }
     })
     .listen(port, function () {
       console.log('http://localhost:'+port)
