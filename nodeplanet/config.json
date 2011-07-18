@@ -7,7 +7,7 @@
     },
     "isaacs": {
       "feed": "http://blog.izs.me/rss",
-      "author": "Issac Schlueter",
+      "author": "Isaac Schlueter",
       "link": "http://blog.izs.me"
     },
     "azer": {
@@ -34,6 +34,11 @@
       "feed": "http://feeds.feedburner.com/3rd-eden",
       "author": "Arnout Kazemier",
       "link": "http://blog.3rd-eden.com/"
+    },
+    "marco rogers": {
+      "feed": "http://marcorogers.com/blog/rss",
+      "author": "Marco Rogers",
+      "link": "http://marcorogers.com/blog"
     }
   },
   "title": "Planet node.js",
