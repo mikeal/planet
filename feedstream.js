@@ -55,6 +55,9 @@ function FeedStream (strict) {
                 if (!post.guid) {
                   post.guid = post.link
                 }
+                if (post['content:encoded']) {
+                  post.description = post['content:encoded']
+                }
                 self.emit('post', post)
                 parser.onopentag = function (node) {
                   if (node.name === 'item') itemlistener()
@@ -133,6 +136,9 @@ function FeedStream (strict) {
     }
   }
   this.parser = parser
+  parser.on('error', function (err) {
+    cosnole.error(err)
+  })
 }
 util.inherits(FeedStream, stream.Stream)
 FeedStream.prototype.write = function (chunk) {
