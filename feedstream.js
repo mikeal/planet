@@ -56,7 +56,9 @@ function FeedStream (strict) {
                   post.guid = post.link
                 }
                 if (post['content:encoded']) {
+                  // If we have an encoded description it's what we really want
                   post.description = post['content:encoded']
+                  delete post['content:encoded']
                 }
                 self.emit('post', post)
                 parser.onopentag = function (node) {
