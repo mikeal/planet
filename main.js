@@ -24,11 +24,11 @@ function build (name, blog, builddir, cb) {
   var feed = feedstream.get(blog.feed)
   var counter = 1
   feed.on('post', function (post) {
-    if (!post.pubDate || !post.pubDate.toISOString) return;
-    post.isoTimestamp = post.pubDate.toISOString()
+    if (!post.pubdate || !post.pubdate.toISOString) return;
+    post.isoTimestamp = post.pubdate.toISOString()
     post._id = post.isoTimestamp + '-' + name 
     post.site = blog
-    post.displayDate = post.pubDate.toString("MMM d yyyy")
+    post.displayDate = post.pubdate.toString("MMM d yyyy")
     counter++
     fs.writeFile(path.join(builddir, 'db', post._id + '.json'), JSON.stringify(post, null, 2), function () {
       counter--
@@ -125,7 +125,7 @@ function createAssets (configpath, builddir, cb) {
           config.posts.push(JSON.parse(info[1].toString()))
         })
         if (config.posts.length) {
-          config.pubDate = config.posts[0].pubDate;
+          config.pubdate = config.posts[0].pubdate;
           config.rfc822 = config.posts[0].rfc822;
         }
         config.sitesArray = []

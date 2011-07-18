@@ -11,38 +11,42 @@ require('./date')
 function FeedStream (strict) {
   var self = this;
   self.writable = true;
-  var parser = sax.createStream(strict === undefined ? true : strict);
+  var parser = sax.createStream(strict === undefined ? false : strict);
   self.pipe(parser)
-  
+
   parser.onopentag = function (node) {
+    var name = node.name.toLowerCase()
     // RSS Support
-    if (node.name === 'rss') {
+    if (name === 'rss') {
       parser.onopentag = function (node) {
-        if (node.name === 'channel') {
+        var name = node.name.toLowerCase()
+        if (name === 'channel') {
           var itemlistener = function () {
             var post = {};
             parser.onopentag = function (node) {
-              post[node.name] = ''
+              var name = node.name.toLowerCase()
+              post[name] = ''
               var cdata = false;
               parser.ontext = function (text) {
-                post[node.name] += text;
+                post[name] += text;
               }
               parser.oncdata = function (text) {
-                post[node.name] += text;
+                post[name] += text;
                 cdata = true
               }
-              parser.onclosetag = function () {
-                if ((node.name === 'pubDate' || node.name === 'lastBuildDate') && typeof post[node.name] === 'string' ) {
+              parser.onclosetag = function (name) {
+                name = name.toLowerCase()
+                if ((name === 'pubdate' || name === 'lastbuilddate') && typeof post[name] === 'string' ) {
                   // Turn known datetime elements in to Date objects
-                  if (Date.parse(post[node.name])) {
-                    post[node.name] = new Date(Date.parse(post[node.name]))
-                    post.rfc822 = rfc822.getRFC822Date(post[node.name])
+                  if (Date.parse(post[name])) {
+                    post[name] = new Date(Date.parse(post[name]))
+                    post.rfc822 = rfc822.getRFC822Date(post[name])
                   } else {
                     // Hack: if we can't parse the date just assume it's proper format
-                    post.rfc822 = post[node.name]
+                    post.rfc822 = post[name]
                   }
                   if (cdata) {
-                    post[node.name] = escape(post[node.name])
+                    post[name] = escape(post[name])
                   }
                   
                 }
@@ -51,6 +55,7 @@ function FeedStream (strict) {
               }
             }
             var onclosetag = function (name) {
+              name = name.toLowerCase()
               if (name === 'item') {
                 if (!post.guid) {
                   post.guid = post.link
@@ -62,25 +67,27 @@ function FeedStream (strict) {
                 }
                 self.emit('post', post)
                 parser.onopentag = function (node) {
-                  if (node.name === 'item') itemlistener()
+                  var name = node.name.toLowerCase()
+                  if (name === 'item') itemlistener()
                 }
               }
             }
             parser.onclosetag = onclosetag;
           }
           parser.onopentag = function (node) {
-            if (node.name === 'item') itemlistener();
+            var name = node.name.toLowerCase()
+            if (name === 'item') itemlistener();
             else {
               var t = ''
               parser.ontext = function (text) {
                 t += text;
               }
               parser.onclosetag = function () {
-                if (node.name === 'pubDate' || node.name === 'lastBuildDate') {
+                if (name === 'pubdate' || name === 'lastbuilddate') {
                   // Turn known datetime elements in to Date objects
                   t = new Date(Date.parse(t));
                 }
-                self.emit(node.name, t);
+                self.emit(name, t);
               }
             }
           }
@@ -89,9 +96,10 @@ function FeedStream (strict) {
     }
     
     // Atom Support.
-    if (node.name === 'feed') {
+    if (name === 'feed') {
       parser.onopentag = function (node) {
-        if (node.name == 'entry') {
+        var name = node.name.toLowerCase()
+        if (name === 'entry') {
           var post = {}
           
           var link;
@@ -101,23 +109,24 @@ function FeedStream (strict) {
           }
           
           var onentry = function (node) {
-            post[node.name] = ''
+            var name = node.name.toLowerCase()
+            post[name] = ''
             
             parser.ontext = function (text) {
-              post[node.name] += text
+              post[name] += text
             }
             parser.onclosetag = function () {
-              if (node.name == 'link') {
+              if (name === 'link') {
                 post.guid = link
                 post.link = link
               }
-              if (node.name === 'content') {
+              if (name === 'content') {
                 post.description = post.content;
                 delete post.content
               }
-              if (node.name === 'updated') {
-                post.pubDate = new Date(Date.parse(post.updated))
-                post.rfc822 = rfc822.getRFC822Date(post.pubDate)
+              if (name === 'updated') {
+                post.pubdate = new Date(Date.parse(post.updated))
+                post.rfc822 = rfc822.getRFC822Date(post.pubdate)
               }
               parser.onopentag = onentry
               parser.onclosetag = onclose
@@ -139,7 +148,7 @@ function FeedStream (strict) {
   }
   this.parser = parser
   parser.on('error', function (err) {
-    cosnole.error(err)
+    console.error(err)
   })
 }
 util.inherits(FeedStream, stream.Stream)
@@ -149,8 +158,6 @@ FeedStream.prototype.write = function (chunk) {
 FeedStream.prototype.end = function (chunk) {
   this.emit('end', chunk)
 }
-
-
 
 exports.get = function () {
   var s = new FeedStream(arguments[0] ? arguments[0].strict : undefined )
