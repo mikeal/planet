@@ -47,6 +47,7 @@ div#links {
 
 div.post {
   margin-bottom:50px;
+  border-bottom:1px dashed #999; 
 }
 
 div.post-title {
