@@ -118,7 +118,7 @@ function createAssets (configpath, builddir, cb) {
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
       files.sort()
       files.reverse()
-      files = files.slice(0, 10).map(function (p) {return path.join(__dirname, 'build', 'db', p)})
+      files = files.slice(0, 10).map(function (p) {return path.join(builddir, 'db', p)})
       readFiles(files, function (files) {
         config.posts = []
         files.forEach(function (info) {
