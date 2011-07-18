@@ -5,6 +5,8 @@ var stream = require('stream')
   , request = require('request')
   , r = request.defaults({headers:{accept:'application/rss+xml'}})
   ;
+  
+require('./date')
 
 function FeedStream (strict) {
   var self = this;
@@ -13,6 +15,7 @@ function FeedStream (strict) {
   self.pipe(parser)
   
   parser.onopentag = function (node) {
+    // RSS Support
     if (node.name === 'rss') {
       parser.onopentag = function (node) {
         if (node.name === 'channel') {
@@ -27,7 +30,7 @@ function FeedStream (strict) {
                 if ((node.name === 'pubDate' || node.name === 'lastBuildDate') && typeof post[node.name] === 'string' ) {
                   // Turn known datetime elements in to Date objects
                   if (Date.parse(post[node.name])) {
-                    post[node.name] = Date.parse(post[node.name])
+                    post[node.name] = new Date(Date.parse(post[node.name]))
                     post.rfc822 = rfc822.getRFC822Date(post[node.name])
                   } else {
                     // Hack: if we can't parse the date just assume it's proper format
@@ -59,12 +62,61 @@ function FeedStream (strict) {
               parser.onclosetag = function () {
                 if (node.name === 'pubDate' || node.name === 'lastBuildDate') {
                   // Turn known datetime elements in to Date objects
-                  t = Date.parse(t);
+                  t = new Date(Date.parse(t));
                 }
                 self.emit(node.name, t);
               }
             }
           }
+        }
+      }
+    }
+    
+    // Atom Support.
+    if (node.name === 'feed') {
+      parser.onopentag = function (node) {
+        if (node.name == 'entry') {
+          var post = {}
+          
+          var link;
+          
+          parser.onattribute = function (attr) {
+            if (attr.name == 'href') link = attr.value
+          }
+          
+          var onentry = function (node) {
+            post[node.name] = ''
+            
+            parser.ontext = function (text) {
+              post[node.name] += text
+            }
+            parser.onclosetag = function () {
+              if (node.name == 'link') {
+                post.guid = link
+                post.link = link
+              }
+              if (node.name === 'content') {
+                post.description = post.content;
+                delete post.content
+              }
+              if (node.name === 'updated') {
+                post.pubDate = new Date(Date.parse(post.updated))
+                post.rfc822 = rfc822.getRFC822Date(post.pubDate)
+              }
+              parser.onopentag = onentry
+              parser.onclosetag = onclose
+              parser.ontext = null
+            }
+          }
+          var onclose = function () {
+            if (Object.keys(post).length) {
+              self.emit('post', post)
+              post = {}
+            }
+          }
+          
+          parser.onopentag = onentry
+          parser.onclosetag = onclose
         }
       }
     }

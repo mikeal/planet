@@ -9,6 +9,11 @@
       "feed": "http://blog.izs.me/rss",
       "author": "Issac Schlueter",
       "link": "http://blog.izs.me"
+    },
+    "azer": {
+      "feed": "http://io.kodfabrik.com/atom.xml",
+      "author": "Azer Koculu",
+      "link": "http://io.kodfabrik.com" 
     }
   },
   "title": "Planet node.js",

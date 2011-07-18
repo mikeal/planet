@@ -1,6 +1,6 @@
 // Support for rfc822, worst standard EVAR!
 
-require('./date')
+// require('./date')
 
 function getRFC822Date(oDate)
 {

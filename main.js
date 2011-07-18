@@ -11,7 +11,6 @@ var fs = require('fs')
   , crypto = require('crypto')
   ;
     
-// hacky
 require('./date')
 
 datejs = fs.readFileSync(path.join(__dirname, 'date.js'))
