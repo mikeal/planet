@@ -166,9 +166,10 @@ function HTTPBuffer (buffer, headers) {
 util.inherits(HTTPBuffer, stream.Stream)
 HTTPBuffer.prototype.pipe = function (dest) {
   dest.writeHead(200, this.headers)
-  stream.Stream.prototype.pipe.call(this, dest)
-  this.emit('data', this.buffer)
-  this.emit('end')
+  // stream.Stream.prototype.pipe.call(this, dest)
+  // this.emit('data', this.buffer)
+  // this.emit('end')
+  dest.end(this.buffer)
 }
 HTTPBuffer.prototype.write = function () {}
 HTTPBuffer.prototype.end = function () {}
