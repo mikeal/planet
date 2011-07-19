@@ -144,6 +144,16 @@ function createAssets (configpath, builddir, cb) {
   })
 }
 
+function clone (self) {
+  var newObj = (self instanceof Array) ? [] : {};
+  for (i in self) {
+    if (i == 'clone') continue;
+    if (self[i] && typeof self[i] == "object") {
+      newObj[i] = self[i].clone();
+    } else newObj[i] = self[i]
+  } return newObj;
+};
+
 function HTTPBuffer (buffer, headers) {
   var self = this
   if (!Buffer.isBuffer(buffer)) buffer = new Buffer(buffer)
@@ -164,9 +174,27 @@ function HTTPBuffer (buffer, headers) {
       resp.end()
       return
     }
-    resp.writeHead(200, this.headers);
+    var headers = clone(self.headers)
+    if (req.headers['if-modified-since']) {
+      var modified = new Date(req.headers['if-modified-since'])
+      if (modified && self.created >= modified) {
+        headers['content-length'] = 0
+        resp.writeHead(304, headers)
+        resp.end()
+        return
+      }
+    }
+    
+    if (req.headers['if-none-match'] && req.headers['if-none-match'] === self.etag) {
+      headers['content-length'] = 0
+      resp.writeHead(304, headers)
+      resp.end()
+      return
+    }
+    
+    resp.writeHead(200, headers);
     if (!req.method !== 'HEAD') {
-      resp.write(this.buffer)
+      resp.write(self.buffer)
     }
     resp.end()
   })
