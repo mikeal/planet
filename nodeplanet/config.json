@@ -59,6 +59,11 @@
       "feed": "https://tootallnate.net/feed.xml",
       "author": "Nathan Rajlich",
       "link": "https://tootallnate.net"
+    },
+    "Digital Tumbleweed": {
+      "feed": "http://digitaltumbleweed.com/rss.xml",
+      "author": "Nick Campbell",
+      "link": "http://digitaltumbleweed.com"
     }
   },
   "title": "Planet node.js",
