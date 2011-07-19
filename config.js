@@ -1,4 +1,4 @@
 module.exports = {
 	port: 80,
-	buildPath: "./build"
+	buildPath: "/home/node/planetbuild"
 }
