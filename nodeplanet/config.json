@@ -52,8 +52,13 @@
     },
     "بلاگ ند": {
       "feed": "http://blog.nodejs.ir/rss.xml",
-      "autor": "Morteza Milani",
+      "author": "Morteza Milani",
       "link": "http://blog.nodejs.ir"
+    },
+    "Too Tall Nate": {
+      "feed": "https://tootallnate.net/feed.xml",
+      "author": "Nathan Rajlich",
+      "link": "https://tootallnate.net"
     }
   },
   "title": "Planet node.js",
