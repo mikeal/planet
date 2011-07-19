@@ -13,8 +13,6 @@ var fs = require('fs')
     
 require('./date')
 
-datejs = fs.readFileSync(path.join(__dirname, 'date.js'))
-
 function abspath (p) {
   if (p[0] !== '/') p = path.join(__dirname, p)
   return p
@@ -108,7 +106,7 @@ var configpath = 'nodeplanet/config.json'
   
 var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(__dirname, 'templates', 'rss.mustache')];
 
-function createAssets (configpath, builddir, cb) {
+function createAssets (configpath, builddir, assets, cb) {
   readFiles(templates, function (files) {
     var config = getconfig(configpath)
       , indextemplate = files[0][1].toString()
@@ -135,12 +133,22 @@ function createAssets (configpath, builddir, cb) {
           config.sites[site].name = site
           config.sitesArray.push(config.sites[site])
         }
-        var assets = 
+        
+        var newassets = 
           { index: new HTTPBuffer(handlebars.compile(indextemplate)(config), {'content-type':'text/html'})
           , rss: new HTTPBuffer(handlebars.compile(rsstemplate)(config), {'content-type':'application/rss+xml'})
-          , datejs: new HTTPBuffer(datejs, {'content-type':'text/javascript'})
           }
-        cb(assets)
+        
+        // See if they have changed, if they have then use the old ones with the older cache datetime
+        if (assets) {
+          if (assets.index.buffer === newassets.index.buffer) {
+            newassets.index = assets.index;
+          }
+          if (assets.rss.buffer === newassets.rss.buffer) {
+            newassets.rss = assets.rss;
+          }
+        }
+        cb(newassets)
       })
     })
   })
@@ -177,17 +185,16 @@ function HTTPBuffer (buffer, headers) {
       return
     }
     var headers = clone(self.headers)
-    if (req.headers['if-modified-since']) {
-      var modified = new Date(req.headers['if-modified-since'])
-      if (modified && self.created >= modified) {
-        headers['content-length'] = 0
-        resp.writeHead(304, headers)
-        resp.end()
-        return
-      }
+    // It's safer to just do direct timestamp matching because javascript comparison and Date objects
+    // are all kinds of screwed up.
+    if (req.headers['if-modified-since'] && req.headers['if-modified-since'] === self.headers['last-modified']) {
+      headers['content-length'] = 0
+      resp.writeHead(304, headers)
+      resp.end()
+      return
     }
-    
-    if (req.headers['if-none-match'] && req.headers['if-none-match'] === self.etag) {
+
+    if (req.headers['if-none-match'] && req.headers['if-none-match'] === self.headers['etag']) {
       headers['content-length'] = 0
       resp.writeHead(304, headers)
       resp.end()
@@ -214,7 +221,7 @@ function HTTPFile (path, headers) {
 function run (port, builddir) {
   var assets;
   setupBuildDir(builddir)
-  createAssets(configpath, builddir, function (a) {
+  createAssets(configpath, builddir, assets, function (a) {
     assets = a
     http.createServer(function (req, resp) {
       if (req.url === '/') {
@@ -223,11 +230,6 @@ function run (port, builddir) {
       if (req.url === '/site.rss') {
         return assets.rss.emit('request', req, resp)
       }
-      // if (req.url === '/date.js') {
-      //         req.pipe(assets.datejs)
-      //         assets.datejs.pipe(resp)
-      //         return 
-      //       }
     })
     .listen(port, function () {
       console.log('http://localhost:'+port)
@@ -237,7 +239,7 @@ function run (port, builddir) {
   var interval = function () {
     fullbuild(getconfig(configpath), builddir,  function () {
       console.log('regenerated from hosts')
-      createAssets(configpath, builddir, function (a) {
+      createAssets(configpath, builddir, assets, function (a) {
         assets = a
         setTimeout(interval, 1000 * 60 * 10)
       })
