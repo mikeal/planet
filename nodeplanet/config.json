@@ -64,6 +64,11 @@
       "feed": "http://digitaltumbleweed.com/rss.xml",
       "author": "Nick Campbell",
       "link": "http://digitaltumbleweed.com"
+    },
+    "Bogo's Blog": {
+      "feed": "http://talkweb.eu/c/nodejs/feed",
+      "author": "Bogomil Shopov",
+      "link": "http://talkweb.eu/"
     }
   },
   "title": "Planet node.js",
