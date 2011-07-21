@@ -65,6 +65,10 @@ function FeedStream (strict) {
                   post.description = post['content:encoded']
                   delete post['content:encoded']
                 }
+                if (!post.title) {
+                  console.error('Feed item does not have title: '+post.link)
+                  return
+                }
                 self.emit('post', post)
                 parser.onopentag = function (node) {
                   var name = node.name.toLowerCase()

@@ -69,6 +69,11 @@
       "feed": "http://talkweb.eu/c/nodejs/feed",
       "author": "Bogomil Shopov",
       "link": "http://talkweb.eu/"
+    },
+    "Ryah Dahl's Blog": {
+      "feed": "http://antirobotrobot.tumblr.com/rss",
+      "author": "Ryan Dahl",
+      "link": "http://antirobotrobot.tumblr.com"
     }
   },
   "title": "Planet node.js",
