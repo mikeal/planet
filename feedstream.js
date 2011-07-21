@@ -165,7 +165,11 @@ FeedStream.prototype.end = function (chunk) {
 
 exports.get = function () {
   var s = new FeedStream(arguments[0] ? arguments[0].strict : undefined )
-  r.get.apply(request, arguments).pipe(s)
+  var req = r.get.apply(request, arguments)
+  req.pipe(s)
+  req.on('error', function (e) {
+    s.emit('error', e)
+  })
   return s
 }
 exports.FeedStream = FeedStream;
