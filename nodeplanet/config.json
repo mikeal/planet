@@ -74,6 +74,11 @@
       "feed": "http://antirobotrobot.tumblr.com/rss",
       "author": "Ryan Dahl",
       "link": "http://antirobotrobot.tumblr.com"
+    },
+    "Metaduck": {
+      "feed": "http://metaduck.com/tagged/node.js/rss",
+      "author": "Pedro Teixeira",
+      "link": "http://metaduck.com/"
     }
   },
   "title": "Planet node.js",
