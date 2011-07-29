@@ -79,6 +79,11 @@
       "feed": "http://metaduck.com/tagged/node.js/rss",
       "author": "Pedro Teixeira",
       "link": "http://metaduck.com/"
+    },
+    "NodeConf Videos": {
+      "feed": "http://blip.tv/rss/bookmarks/234675",
+      "author": "NodeConf",
+      "link": "http://blip.tv/jsconf"
     }
   },
   "title": "Planet node.js",
