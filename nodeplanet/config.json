@@ -84,6 +84,11 @@
       "feed": "http://blip.tv/rss/bookmarks/234675",
       "author": "NodeConf",
       "link": "http://blip.tv/jsconf"
+    },
+    "Labnotes": {
+      "feed": "http://labnotes.org/feed/atom/",
+      "author": "Assaf Arkin",
+      "link": "http://labnotes.org/"
     }
   },
   "title": "Planet node.js",

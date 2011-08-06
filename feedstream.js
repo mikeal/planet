@@ -114,9 +114,29 @@ function FeedStream (strict) {
           
           var onentry = function (node) {
             var name = node.name.toLowerCase()
+            
+            if (name === 'author') {
+              // author is a sub element we don't care about
+              var counter = 0
+              parser.onopentag = function () {
+                counter++
+              }
+              parser.onclosetag = function () {
+                if (counter-- === 0) {
+                  parser.onopentag = onentry
+                  parser.onclosetag = onclose
+                  parser.ontext = null
+                }
+              }
+              return
+            }
+            
             post[name] = ''
             
             parser.ontext = function (text) {
+              post[name] += text
+            }
+            parser.oncdata = function (text) {
               post[name] += text
             }
             parser.onclosetag = function () {
@@ -124,6 +144,7 @@ function FeedStream (strict) {
                 post.guid = link
                 post.link = link
               }
+                            
               if (name === 'content') {
                 post.description = post.content;
                 delete post.content
