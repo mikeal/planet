@@ -89,6 +89,11 @@
       "feed": "http://labnotes.org/feed/atom/",
       "author": "Assaf Arkin",
       "link": "http://labnotes.org/"
+    },
+    "IT Wars": {
+      "feed": "http://www.it-wars.com/feed.php?atom",
+      "author": "Vincent Rabah",
+      "link": "http://www.it-wars.com/"
     }
   },
   "title": "Planet node.js",
