@@ -99,6 +99,11 @@
       "feed": "http://www.curlybracecast.com/itunes.rss",
       "author": "Mikeal Rogers",
       "link": "http://www.curlybracecast.com/"
+    },
+    "Node Up": {
+      "feed": "http://feeds.feedburner.com/NodeUp",
+      "author": "Node Up",
+      "link": "http://nodeup.com/"
     }
   },
   "title": "Planet node.js",
