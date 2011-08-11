@@ -23,10 +23,22 @@ function FeedStream (strict) {
         if (name === 'channel') {
           var itemlistener = function () {
             var post = {};
+            post.enclosures = []
+            var url, contenttype;
             parser.onopentag = function (node) {
               var name = node.name.toLowerCase()
               post[name] = ''
               var cdata = false;
+              
+              parser.onattribute = function (attr) {
+                if (attr.name == 'url') url = attr.value
+                if (attr.name == 'type') contenttype = attr.value
+              }
+              
+              if (name === 'enclosure') {
+                if (url) post.enclosures.push({url:url,contenttype:contenttype})
+              }
+              
               parser.ontext = function (text) {
                 post[name] += text;
               }
@@ -48,8 +60,10 @@ function FeedStream (strict) {
                   if (cdata) {
                     post[name] = escape(post[name])
                   }
-                  
+                  url = undefined
+                  contenttype = undefined
                 }
+                
                 parser.ontext = null;
                 parser.onclosetag = onclosetag
               }
@@ -70,6 +84,7 @@ function FeedStream (strict) {
                   return
                 }
                 self.emit('post', post)
+                parser.onattribute = null;
                 parser.onopentag = function (node) {
                   var name = node.name.toLowerCase()
                   if (name === 'item') itemlistener()

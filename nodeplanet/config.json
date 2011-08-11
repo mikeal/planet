@@ -94,6 +94,11 @@
       "feed": "http://www.it-wars.com/feed.php?atom",
       "author": "Vincent Rabah",
       "link": "http://www.it-wars.com/"
+    },
+    "CurlyBraceCast": {
+      "feed": "http://www.curlybracecast.com/itunes.rss",
+      "author": "Mikeal Rogers",
+      "link": "http://www.curlybracecast.com/"
     }
   },
   "title": "Planet node.js",
