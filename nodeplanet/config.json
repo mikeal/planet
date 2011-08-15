@@ -21,9 +21,9 @@
       "link": "http://blog.nodejitsu.com"
     },
     "node knockout": {
-      "feed": "http://nodeknockout.posterous.com/rss.xml",
+      "feed": "http://blog.nodeknockout.com/rss",
       "author": "Node KO",
-      "link": "http://nodeknockout.posterous.com"
+      "link": "http://blog.nodeknockout.com/"
     },
     "node blog": {
       "feed": "http://blog.nodejs.org/feed/",
