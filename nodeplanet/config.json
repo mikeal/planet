@@ -104,6 +104,11 @@
       "feed": "http://feeds.feedburner.com/NodeUp",
       "author": "Node Up",
       "link": "http://nodeup.com/"
+    },
+    "Nuno's Notebook": {
+      "feed": "http://feeds.feedburner.com/nunojob",
+      "author": "Nuno Job",
+      "link": "http://writings.nunojob.com/"
     }
   },
   "title": "Planet node.js",
