@@ -109,6 +109,11 @@
       "feed": "http://feeds.feedburner.com/nunojob",
       "author": "Nuno Job",
       "link": "http://writings.nunojob.com/"
+    },
+    "Dave Stevens": {
+      "feed": "http://davestevens.us/feed",
+      "author": "Dave Stevens",
+      "link": "http://davestevens.us"
     }
   },
   "title": "Planet node.js",
