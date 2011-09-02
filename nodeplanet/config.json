@@ -114,6 +114,11 @@
       "feed": "http://davestevens.us/feed",
       "author": "Dave Stevens",
       "link": "http://davestevens.us"
+    },
+    "Shape Shed": {
+      "feed": "http://feeds.shapeshed.com/shapeshed",
+      "author": "George Ornbo",
+      "link": "http://shapeshed.com/"
     }
   },
   "title": "Planet node.js",
