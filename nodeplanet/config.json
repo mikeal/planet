@@ -1,4 +1,4 @@
-{ 
+{
   "sites": {
     "mikeal": {
       "feed": "http://www.mikealrogers.com/site.rss",
@@ -13,7 +13,7 @@
     "azer": {
       "feed": "http://io.kodfabrik.com/atom.xml",
       "author": "Azer Koculu",
-      "link": "http://io.kodfabrik.com" 
+      "link": "http://io.kodfabrik.com"
     },
     "nodejitsu": {
       "feed": "http://blog.nodejitsu.com/feed.xml",
@@ -51,9 +51,9 @@
       "link": "http://weblog.bocoup.com"
     },
     "بلاگ ند": {
-      "feed": "http://blog.nodejs.ir/rss.xml",
+      "feed": "http://nodejs.ir/blog/feed.xml",
       "author": "Morteza Milani",
-      "link": "http://blog.nodejs.ir"
+      "link": "http://nodejs.ir"
     },
     "Too Tall Nate": {
       "feed": "https://tootallnate.net/feed.xml",
