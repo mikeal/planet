@@ -119,6 +119,11 @@
       "feed": "http://feeds.shapeshed.com/shapeshed",
       "author": "George Ornbo",
       "link": "http://shapeshed.com/"
+    },
+    "Nico": {
+      "feed": "http://siriux.net/tag/node/feed/",
+      "author": "Nico Kaiser",
+      "link": "http://siriux.net/"
     }
   },
   "title": "Planet node.js",
