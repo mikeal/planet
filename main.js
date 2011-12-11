@@ -222,6 +222,8 @@ function run (port, builddir) {
       if (req.url === '/site.rss') {
         return assets.rss.emit('request', req, resp)
       }
+      resp.statusCode = 404
+      resp.end()
     })
     .listen(port, function () {
       console.log('http://localhost:'+port)
