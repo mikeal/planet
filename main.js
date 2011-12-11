@@ -122,7 +122,11 @@ function createAssets (configpath, builddir, assets, cb) {
       readFiles(files, function (files) {
         config.posts = []
         files.forEach(function (info) {
-          config.posts.push(JSON.parse(info[1].toString()))
+          try {
+            config.posts.push(JSON.parse(info[1].toString()))
+          } catch(e) {
+            console.error('Couldnt parse')
+          }
         })
         if (config.posts.length) {
           config.pubdate = config.posts[0].pubdate;
