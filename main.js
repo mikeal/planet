@@ -210,14 +210,6 @@ function HTTPBuffer (buffer, headers) {
 }
 util.inherits(HTTPBuffer, events.EventEmitter)
 
-function HTTPFile (path, headers) {
-  var self = this
-  self.writable = true
-  self.readable = true
-  self.path = path
-  self.headers = headers
-}
-
 function run (port, builddir) {
   var assets;
   setupBuildDir(builddir)
@@ -237,15 +229,26 @@ function run (port, builddir) {
   })
   
   var interval = function () {
+    var timedout = false
+    var t = setTimeout(function () {
+      console.error('timed out, generating anyway')
+      createAssets(configpath, builddir, assets, function (a) {
+        assets = a
+        setTimeout(interval, 1000 * 60 * 10)
+      })
+    }, 1000 * 30)
+    
     fullbuild(getconfig(configpath), builddir,  function () {
+      if (timedout) return
       console.log('regenerated from hosts')
+      clearTimeout(t)
       createAssets(configpath, builddir, assets, function (a) {
         assets = a
         setTimeout(interval, 1000 * 60 * 10)
       })
     }) 
   }
-  setTimeout(interval, 1000 * 30)
+  setTimeout(interval, 1000 * 10)
   
   // for debugging
   // setInterval(function () {
