@@ -124,6 +124,11 @@
       "feed": "http://siriux.net/tag/node/feed/",
       "author": "Nico Kaiser",
       "link": "http://siriux.net/"
+    },
+    "catonmat": {
+      "feed": "http://www.catonmat.net/feed/",
+      "author": "Peteris Krumins",
+      "link": "http://www.catonmat.net"
     }
   },
   "title": "Planet node.js",
