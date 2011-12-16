@@ -129,6 +129,11 @@
       "feed": "http://www.catonmat.net/feed/",
       "author": "Peteris Krumins",
       "link": "http://www.catonmat.net"
+    },
+    "Asynchronous Thoughts": {
+      "feed": "http://robkuz-blog.blogspot.com/feeds/posts/default",
+      "author": "robert kuzelj",
+      "link": "http://robkuz-blog.blogspot.com/"
     }
   },
   "title": "Planet node.js",
