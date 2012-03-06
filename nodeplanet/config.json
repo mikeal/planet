@@ -145,15 +145,15 @@
       "author": "Wraithan",
       "link": "http://blog.wraithan.net/"
     }, 
-    "hypermégatop, parfois": {
+    "hypermégatop parfois": {
       "feed": "http://hypermegatop.calepin.co/feeds/all.atom.xml",
       "author": "Martin Angers",
-      "site": "http://hypermegatop.calepin.co/"
+      "link": "http://hypermegatop.calepin.co/"
     },
     "NodeJS News": {
       "feed": "http://www.nodejs-news.com/feed/",
       "author": "Vincent RABAH",
-      "site": "http://www.nodejs-news.com/"
+      "link": "http://www.nodejs-news.com/"
     }
   },
   "title": "Planet node.js",
