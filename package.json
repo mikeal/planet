@@ -8,9 +8,12 @@
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.1-24",
+  "version": "0.0.1-26",
   "bundleDependencies": [
     "request",
     "sax"
-  ]
+  ],
+  "engines": {
+    "node": "v0.6.x"
+  }
 }

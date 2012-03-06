@@ -134,6 +134,26 @@
       "feed": "http://robkuz-blog.blogspot.com/feeds/posts/default",
       "author": "robert kuzelj",
       "link": "http://robkuz-blog.blogspot.com/"
+    },
+    "Development Seed": {
+      "feed": "http://developmentseed.org/blog/nodejs.rss/",
+      "author": "Development Seed",
+      "link": "http://developmentseed.org"
+    },
+    "The Blaggin' Wraith": {
+      "feed": "http://blog.wraithan.net/feeds/posts/default/-/nodejs",
+      "author": "Wraithan",
+      "link": "http://blog.wraithan.net/"
+    }, 
+    "hypermégatop, parfois": {
+      "feed": "http://hypermegatop.calepin.co/feeds/all.atom.xml",
+      "author": "Martin Angers",
+      "site": "http://hypermegatop.calepin.co/"
+    },
+    "NodeJS News": {
+      "feed": "http://www.nodejs-news.com/feed/",
+      "author": "Vincent RABAH",
+      "site": "http://www.nodejs-news.com/"
     }
   },
   "title": "Planet node.js",
