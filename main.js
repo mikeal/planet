@@ -5,6 +5,7 @@ var fs = require('fs')
   , stream = require('stream')
   , util = require('util')
   , http = require('http')
+  , url = require('url')
   , rfc822 = require('./rfc822')
   , feedstream = require('./feedstream')
   , handlebars = require('./handlebars')
@@ -128,6 +129,12 @@ function createAssets (configpath, builddir, assets, cb) {
             console.error('Couldnt parse')
           }
         })
+        config.posts.forEach(function (post) {
+          if (post.site.link) {
+            post.link = url.resolve(post.site.link, post.link)
+          }
+        })
+        
         if (config.posts.length) {
           config.pubdate = config.posts[0].pubdate;
           config.rfc822 = config.posts[0].rfc822;
