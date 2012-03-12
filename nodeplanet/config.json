@@ -154,6 +154,11 @@
       "feed": "http://www.nodejs-news.com/feed/",
       "author": "Vincent RABAH",
       "link": "http://www.nodejs-news.com/"
+    },
+    "Estisia Development Blog": {
+      "feed": "http://dev.estisia.com/tag/nodejs/feed/",
+      "author": "Tucsok, Bika",
+      "link": "http://dev.estisia.com"
     }
   },
   "title": "Planet node.js",
