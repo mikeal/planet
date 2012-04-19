@@ -159,6 +159,16 @@
       "feed": "http://dev.estisia.com/tag/nodejs/feed/",
       "author": "Tucsok, Bika",
       "link": "http://dev.estisia.com"
+    },
+    "Createweb Blog": {
+      "feed": " http://www.createweb.be/wordpress/?tag=node-js&feed=rss2",
+      "author": "Elias Lecomte",
+      "link": "http://www.createweb.be/wordpress/?tag=node-js"
+    },
+    "Max Ogden": {
+      "feed": "http://maxogden.com/rss",
+      "author": "Max Ogden",
+      "link": "http://maxogden.com"
     }
   },
   "title": "Planet node.js",
