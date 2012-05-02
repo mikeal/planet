@@ -146,9 +146,9 @@
       "link": "http://blog.wraithan.net/"
     }, 
     "hypermégatop parfois": {
-      "feed": "http://hypermegatop.calepin.co/feeds/all.atom.xml",
+      "feed": " http://hypermegatop.github.com/feed.xml",
       "author": "Martin Angers",
-      "link": "http://hypermegatop.calepin.co/"
+      "link": "http://hypermegatop.github.com/"
     },
     "NodeJS News": {
       "feed": "http://www.nodejs-news.com/feed/",
