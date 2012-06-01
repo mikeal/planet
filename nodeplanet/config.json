@@ -169,6 +169,11 @@
       "feed": "http://maxogden.com/rss",
       "author": "Max Ogden",
       "link": "http://maxogden.com"
+    },
+    "Feeding the Cloud": {
+      "feed": "http://feeding.cloud.geek.nz/feeds/posts/default/-/nodejs",
+      "author": "Francois Marier",
+      "link": "http://feeding.cloud.geek.nz/"
     }
   },
   "title": "Planet node.js",

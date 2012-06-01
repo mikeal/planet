@@ -8,7 +8,7 @@
   "scripts": {
     "start": "server.js"
   },
-  "version": "0.0.1-32",
+  "version": "0.0.1-33",
   "bundleDependencies": [
     "request",
     "sax"
