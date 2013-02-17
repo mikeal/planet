@@ -3,6 +3,7 @@ var stream = require('stream')
   , util = require('util')
   , rfc822 = require('./rfc822')
   , request = require('request')
+  , stripHtml = require('resanitize').stripHtml
   , r = request.defaults({headers:{accept:'application/rss+xml'}})
   ;
   
@@ -83,6 +84,7 @@ function FeedStream (strict) {
                   console.error('Feed item does not have title: '+post.link)
                   return
                 }
+                post.title = stripHtml(post.title);
                 self.emit('post', post)
                 parser.onattribute = null;
                 parser.onopentag = function (node) {
@@ -175,6 +177,7 @@ function FeedStream (strict) {
           }
           var onclose = function () {
             if (Object.keys(post).length) {
+              post.title = stripHtml(post.title);
               self.emit('post', post)
               post = {}
             }

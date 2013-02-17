@@ -50,11 +50,6 @@
       "author": "Bocoup",
       "link": "http://weblog.bocoup.com"
     },
-    "بلاگ ند": {
-      "feed": "http://nodejs.ir/blog/feed.xml",
-      "author": "Morteza Milani",
-      "link": "http://nodejs.ir"
-    },
     "Too Tall Nate": {
       "feed": "https://tootallnate.net/feed.xml",
       "author": "Nathan Rajlich",
@@ -109,11 +104,6 @@
       "feed": "http://feeds.feedburner.com/nunojob",
       "author": "Nuno Job",
       "link": "http://writings.nunojob.com/"
-    },
-    "Dave Stevens": {
-      "feed": "http://davestevens.us/feed",
-      "author": "Dave Stevens",
-      "link": "http://davestevens.us"
     },
     "Shape Shed": {
       "feed": "http://feeds.shapeshed.com/shapeshed",

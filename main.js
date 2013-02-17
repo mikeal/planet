@@ -44,7 +44,8 @@ function build (name, blog, builddir, cb) {
       cb = null
     }
   })
-  feed.on('error', function () {
+  feed.on('error', function (err) {
+    console.error('%s - build error (%s) - [%s]: %s', new Date(), blog.feed, err, err.code)
     if (cb) cb();
     cb = null;
   })
