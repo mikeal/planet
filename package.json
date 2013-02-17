@@ -11,7 +11,8 @@
   "version": "0.0.1-33",
   "bundleDependencies": [
     "request",
-    "sax"
+    "sax",
+    "resanitize"
   ],
   "engines": {
     "node": "v0.6.x"
