@@ -104,15 +104,17 @@ function readFiles (files, cb) {
 var configpath = 'nodeplanet/config.json'
   , index = null
   , rss = null
+  , opml = null
   ;
   
-var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(__dirname, 'templates', 'rss.mustache')];
+var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(__dirname, 'templates', 'rss.mustache'), path.join(__dirname, 'templates', 'opml.mustache')];
 
 function createAssets (configpath, builddir, assets, cb) {
   readFiles(templates, function (files) {
     var config = getconfig(configpath)
       , indextemplate = files[0][1].toString()
       , rsstemplate = files[1][1].toString()
+      , opmltemplate = files[2][1].toString()
       ;
   
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
@@ -149,6 +151,7 @@ function createAssets (configpath, builddir, assets, cb) {
         var newassets = 
           { index: new HTTPBuffer(handlebars.compile(indextemplate)(config), {'content-type':'text/html'})
           , rss: new HTTPBuffer(handlebars.compile(rsstemplate)(config), {'content-type':'application/rss+xml'})
+          , opml: new HTTPBuffer(handlebars.compile(opmltemplate)(config), {'content-type':'text/x-opml'})
           }
         
         // See if they have changed, if they have then use the old ones with the older cache datetime
@@ -158,6 +161,9 @@ function createAssets (configpath, builddir, assets, cb) {
           }
           if (assets.rss.buffer === newassets.rss.buffer) {
             newassets.rss = assets.rss;
+          }
+          if (assets.opml.buffer === newassets.opml.buffer) {
+            newassets.opml = assets.opml;
           }
         }
         cb(newassets)
@@ -233,6 +239,9 @@ function run (port, builddir) {
       }
       if (req.url === '/site.rss') {
         return assets.rss.emit('request', req, resp)
+      }
+      if (req.url === '/site.opml') {
+        return assets.opml.emit('request', req, resp)
       }
       resp.statusCode = 404
       resp.end()
