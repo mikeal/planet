@@ -18,6 +18,12 @@ div#feedlink {
   right:10px;
 }
 
+div#opmllink {
+  position:absolute;
+  top:52px;
+  right:10px;
+}
+
 div#title {
   width:100%;
   font-size:40px;
