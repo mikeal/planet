@@ -30,11 +30,11 @@
   ],
   "scripts": {
     "test": "fakeredis=true node ./node_modules/.bin/mocha --reporter spec && fakeredis=false node ./node_modules/.bin/mocha --reporter spec",
-    "start": "server.js"
+    "start": "node server.js"
   },
   "domains": [
-    "demo.actionherojs.com",
-    "actionherojs.com"
+    "www.planetnodejs.com",
+    "planetnodejs.com"
   ],
   "subdomain": "planet"
 }
