@@ -13,6 +13,8 @@ function FeedStream (strict) {
   var self = this;
   self.writable = true;
   var parser = sax.createStream(strict === undefined ? false : strict);
+  parser.setMaxListeners(200); // TODO: Fix memory leak
+
   self.pipe(parser)
 
   parser.onopentag = function (node) {
