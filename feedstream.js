@@ -6,7 +6,7 @@ var stream = require('stream')
   , stripHtml = require('resanitize').stripHtml
   , r = request.defaults({headers:{accept:'application/rss+xml'}})
   ;
-  
+
 require('./date')
 
 function FeedStream (strict) {
@@ -30,16 +30,16 @@ function FeedStream (strict) {
               var name = node.name.toLowerCase()
               post[name] = ''
               var cdata = false;
-              
+
               parser.onattribute = function (attr) {
                 if (attr.name == 'url') url = attr.value
                 if (attr.name == 'type') contenttype = attr.value
               }
-              
+
               if (name === 'enclosure') {
                 if (url) post.enclosures.push({url:url,contenttype:contenttype})
               }
-              
+
               parser.ontext = function (text) {
                 post[name] += text;
               }
@@ -64,7 +64,7 @@ function FeedStream (strict) {
                   url = undefined
                   contenttype = undefined
                 }
-                
+
                 parser.ontext = null;
                 parser.onclosetag = onclosetag
               }
@@ -115,23 +115,23 @@ function FeedStream (strict) {
         }
       }
     }
-    
+
     // Atom Support.
     if (name === 'feed') {
       parser.onopentag = function (node) {
         var name = node.name.toLowerCase()
         if (name === 'entry') {
           var post = {}
-          
+
           var link;
-          
+
           parser.onattribute = function (attr) {
             if (attr.name == 'href') link = attr.value
           }
-          
+
           var onentry = function (node) {
             var name = node.name.toLowerCase()
-            
+
             if (name === 'author') {
               // author is a sub element we don't care about
               var counter = 0
@@ -147,9 +147,9 @@ function FeedStream (strict) {
               }
               return
             }
-            
+
             post[name] = ''
-            
+
             parser.ontext = function (text) {
               post[name] += text
             }
@@ -161,7 +161,7 @@ function FeedStream (strict) {
                 post.guid = link
                 post.link = link
               }
-                            
+
               if (name === 'content') {
                 post.description = post.content;
                 delete post.content
@@ -182,7 +182,7 @@ function FeedStream (strict) {
               post = {}
             }
           }
-          
+
           parser.onopentag = onentry
           parser.onclosetag = onclose
         }

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <opml version="2.0">
-	<head>
-		<title>{{title}}</title>
-		<ownerName>Mikeal Rogers</ownerName>
-		<ownerEmail>{{editorEmail}}</ownerEmail>
-		<dateModified>{{rfc822}}</dateModified>
-	</head>
-	<body>
-	  {{#sitesArray}}
-	  <outline xmlUrl="{{feed}}" type="rss" text="{{name}}" title="{{name}}" htmlUrl="{{link}}"/>
-	  {{/sitesArray}}
+  <head>
+    <title>{{title}}</title>
+    <ownerName>Mikeal Rogers</ownerName>
+    <ownerEmail>{{editorEmail}}</ownerEmail>
+    <dateModified>{{rfc822}}</dateModified>
+  </head>
+  <body>
+    {{#sitesArray}}
+    <outline xmlUrl="{{feed}}" type="rss" text="{{name}}" title="{{name}}" htmlUrl="{{link}}"/>
+    {{/sitesArray}}
   </body>
 </opml>

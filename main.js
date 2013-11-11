@@ -11,7 +11,7 @@ var fs = require('fs')
   , handlebars = require('./handlebars')
   , crypto = require('crypto')
   ;
-    
+
 require('./date')
 
 function abspath (p) {
@@ -25,7 +25,7 @@ function build (name, blog, builddir, cb) {
   feed.on('post', function (post) {
     if (!post.pubdate || !post.pubdate.toISOString) return;
     post.isoTimestamp = post.pubdate.toISOString()
-    post._id = post.isoTimestamp + '-' + name 
+    post._id = post.isoTimestamp + '-' + name
     post.site = blog
     post.displayDate = post.pubdate.toString("MMM d yyyy")
     counter++
@@ -53,7 +53,7 @@ function build (name, blog, builddir, cb) {
 
 function setupBuildDir (builddir) {
   try { fs.mkdirSync(builddir, 0777) } catch(e) {}
-  try { fs.mkdirSync(path.join(builddir, 'db'), 0777) } catch(e) {}  
+  try { fs.mkdirSync(path.join(builddir, 'db'), 0777) } catch(e) {}
 }
 
 function fullbuild (config, builddir, cb) {
@@ -84,8 +84,8 @@ function readFiles (files, cb) {
     , counter = 0
     , ret = []
     ;
-    
-  if (files.length === 0) cb([]) 
+
+  if (files.length === 0) cb([])
   files.forEach(function (f) {
     counter++
     fs.readFile(f, function (err, d) {
@@ -106,7 +106,7 @@ var configpath = 'nodeplanet/config.json'
   , rss = null
   , opml = null
   ;
-  
+
 var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(__dirname, 'templates', 'rss.mustache'), path.join(__dirname, 'templates', 'opml.mustache')];
 
 function createAssets (configpath, builddir, assets, cb) {
@@ -116,10 +116,10 @@ function createAssets (configpath, builddir, assets, cb) {
       , rsstemplate = files[1][1].toString()
       , opmltemplate = files[2][1].toString()
       ;
-  
+
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
   	  if(err) throw err;
-  	  
+
       files.sort()
       files.reverse()
       files = files.slice(0, 10).map(function (p) {return path.join(builddir, 'db', p)})
@@ -137,7 +137,7 @@ function createAssets (configpath, builddir, assets, cb) {
             post.link = url.resolve(post.site.link, post.link)
           }
         })
-        
+
         if (config.posts.length) {
           config.pubdate = config.posts[0].pubdate;
           config.rfc822 = config.posts[0].rfc822;
@@ -147,13 +147,13 @@ function createAssets (configpath, builddir, assets, cb) {
           config.sites[site].name = site
           config.sitesArray.push(config.sites[site])
         }
-        
-        var newassets = 
+
+        var newassets =
           { index: new HTTPBuffer(handlebars.compile(indextemplate)(config), {'content-type':'text/html'})
           , rss: new HTTPBuffer(handlebars.compile(rsstemplate)(config), {'content-type':'application/rss+xml'})
           , opml: new HTTPBuffer(handlebars.compile(opmltemplate)(config), {'content-type':'text/x-opml'})
           }
-        
+
         // See if they have changed, if they have then use the old ones with the older cache datetime
         if (assets) {
           if (assets.index.buffer === newassets.index.buffer) {
@@ -188,9 +188,9 @@ function HTTPBuffer (buffer, headers) {
   self.writable = true
   self.readable = true
   self.buffer = buffer
-  
+
   self.md5 = crypto.createHash('md5').update(self.buffer).digest("hex");
-  
+
   self.created = new Date()
   self.headers = headers
   self.headers['content-length'] = buffer.length
@@ -218,7 +218,7 @@ function HTTPBuffer (buffer, headers) {
       resp.end()
       return
     }
-    
+
     resp.writeHead(200, headers);
     if (!req.method !== 'HEAD') {
       resp.write(self.buffer)
@@ -250,7 +250,7 @@ function run (port, builddir) {
       console.log('http://localhost:'+port)
     })
   })
-  
+
   var interval = function () {
     var timedout = false
     var t = setTimeout(function () {
@@ -260,7 +260,7 @@ function run (port, builddir) {
         setTimeout(interval, 1000 * 60 * 10)
       })
     }, 1000 * 30)
-    
+
     fullbuild(getconfig(configpath), builddir,  function () {
       if (timedout) return
       console.log('regenerated from hosts')
@@ -269,10 +269,10 @@ function run (port, builddir) {
         assets = a
         setTimeout(interval, 1000 * 60 * 10)
       })
-    }) 
+    })
   }
   setTimeout(interval, 1000 * 10)
-  
+
   // for debugging
   // setInterval(function () {
   //   createAssets(configpath, builddir, function (a) {
@@ -283,7 +283,7 @@ function run (port, builddir) {
 
 exports.run = run;
 
-  
+
 
 
 
