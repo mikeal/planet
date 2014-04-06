@@ -2,7 +2,7 @@
   "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
   "name": "planet",
   "description": "NodeJS News Aggregator",
-  "version": "0.0.1-33",
+  "version": "0.2.0",
   "homepage": "http://planetnodejs.com",
   "repository": {
     "type": "git",
@@ -14,20 +14,15 @@
     "aggregator"
   ],
   "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.3.11"
+    "node": "~0.10.25",
+    "npm": "~1.4.3"
   },
   "dependencies": {
-    "request": "~2.27.0",
-    "sax": "0.5.4",
-    "resanitize": "~0.3.0"
+    "feedparser": "^0.16.6",
+    "request": "^2.34.0",
+    "handlebars": "^2.0.0-alpha.2"
   },
   "devDependencies": {},
-  "bundleDependencies": [
-    "request",
-    "sax",
-    "resanitize"
-  ],
   "scripts": {
     "test": "fakeredis=true node ./node_modules/.bin/mocha --reporter spec && fakeredis=false node ./node_modules/.bin/mocha --reporter spec",
     "start": "node server.js"

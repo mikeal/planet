@@ -7,8 +7,9 @@ var fs = require('fs')
   , http = require('http')
   , url = require('url')
   , rfc822 = require('./rfc822')
-  , feedstream = require('./feedstream')
-  , handlebars = require('./handlebars')
+  , feedparser = require('feedparser')
+  , request    = require('request')
+  , handlebars = require('handlebars')
   , crypto = require('crypto')
   ;
 
@@ -20,35 +21,59 @@ function abspath (p) {
 }
 
 function build (name, blog, builddir, cb) {
-  var feed = feedstream.get(blog.feed)
   var counter = 1
-  feed.on('post', function (post) {
-    if (!post.pubdate || !post.pubdate.toISOString) return;
-    post.isoTimestamp = post.pubdate.toISOString()
-    post._id = post.isoTimestamp + '-' + name
-    post.site = blog
-    post.displayDate = post.pubdate.toString("MMM d yyyy")
-    counter++
-    fs.writeFile(path.join(builddir, 'db', post._id + '.json'), JSON.stringify(post, null, 2), function () {
-      counter--
-      if (counter === 0 && cb) {
-        cb()
-        cb = null
-      }
-    })
-  })
-  feed.on('end', function () {
+
+  var req = request(blog.feed)
+    , parser = new feedparser();
+
+  req.on('error', function (error) {
+    // handle any request errors
+  });
+  req.on('response', function (res) {
+    var stream = this;
+
+    if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
+
+    stream.pipe(parser);
+  });
+
+  parser.on('readable', function() {
+    // This is where the action is!
+    var stream = this
+      , meta = this.meta // **NOTE** the "meta" is always available in the context of the feedparser instance
+      , item;
+
+    while (post = stream.read()) {
+      if (!post.pubdate || !post.pubdate.toISOString) return;
+
+      post.isoTimestamp = post.pubdate.toISOString()
+      post._id = post.isoTimestamp + '-' + name
+      post.site = blog
+      post.displayDate = post.pubdate.toString("MMM d yyyy")
+      counter++
+      fs.writeFile(path.join(builddir, 'db', post._id + '.json'), JSON.stringify(post, null, 2), function () {
+        counter--
+        if (counter === 0 && cb) {
+          cb()
+          cb = null
+        }
+      })
+    }
+  });
+
+  parser.on('end', function () {
     counter--
     if (counter === 0 && cb) {
       cb()
       cb = null
     }
   })
-  feed.on('error', function (err) {
+
+  parser.on('error', function(err) {
     console.error('%s - build error (%s) - [%s]: %s', new Date(), blog.feed, err, err.code)
     if (cb) cb();
     cb = null;
-  })
+  });
 }
 
 function setupBuildDir (builddir) {
@@ -140,7 +165,7 @@ function createAssets (configpath, builddir, assets, cb) {
 
         if (config.posts.length) {
           config.pubdate = config.posts[0].pubdate;
-          config.rfc822 = config.posts[0].rfc822;
+          config.rfc822  = config.posts[0].rfc822;
         }
         config.sitesArray = []
         for (site in config.sites) {
