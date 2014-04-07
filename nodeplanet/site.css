@@ -5,11 +5,11 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
-body { 
+body {
   font-family: PT Sans, arial, serif;
-  text-align: center; 
-  margin: 0 0 0 0; 
-  vertical-align: middle; 
+  text-align: center;
+  margin: 0 0 0 0;
+  vertical-align: middle;
 }
 
 div#feedlink {
@@ -34,8 +34,8 @@ div#title {
 
 div#container {
   margin: 0 auto;
-  width: 760px; 
-  text-align: left; 
+  width: 760px;
+  text-align: left;
   margin: 0 auto;
 }
 
@@ -53,7 +53,7 @@ div#links {
 
 div.post {
   margin-bottom:50px;
-  border-bottom:1px dashed #999; 
+  border-bottom:1px dashed #999;
 }
 
 div.post-title {
@@ -71,7 +71,7 @@ span.post-displayDate, span.byline {
 pre {
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
-  white-space: -pre-wrap; 
+  white-space: -pre-wrap;
   white-space: -o-pre-wrap;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }

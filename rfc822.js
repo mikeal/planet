@@ -4,12 +4,12 @@
 
 function getRFC822Date(oDate)
 {
-  var aMonths = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+  var aMonths = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun",
                           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
-  
+
   var aDays = new Array( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
   var dtm = new String();
-		
+
   dtm = aDays[oDate.getDay()] + ", ";
   dtm += padWithZero(oDate.getDate()) + " ";
   dtm += aMonths[oDate.getMonth()] + " ";
