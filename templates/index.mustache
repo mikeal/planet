@@ -22,22 +22,6 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{url}}/site.rss" />
     <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="{{url}}/site.opml" />
 
-    <script type="text/javascript">
-    	var analyticsFileTypes = [''];
-    	var analyticsEventTracking = 'enabled';
-    </script>
-    <script type="text/javascript">
-    	var _gaq = _gaq || [];
-    	_gaq.push(['_setAccount', 'UA-3515839-13']);
-    	_gaq.push(['_trackPageview']);
-
-    	(function() {
-    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    	})();
-    </script>
-
     <title>{{title}}</title>
 
     <style type="text/css">
@@ -93,5 +77,15 @@
         <div id="add-site"><a href="mailto:{{editorEmail}}?subject=Add my site to {{title}}&body=Title: %0A%0aFeed: %0A%0AAuthor Name: %0A%0ASite Url:%0A%0A">add your site?</a></div>
       </div>
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-33396402-5', 'planetnodejs.com');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
