@@ -14,13 +14,13 @@
     "aggregator"
   ],
   "engines": {
-    "node": "~0.10.25",
-    "npm": "~1.4.3"
+    "node": "*",
+    "npm": "*"
   },
   "dependencies": {
-    "feedparser": "^0.16.6",
-    "request": "^2.34.0",
-    "handlebars": "^2.0.0-alpha.2"
+    "feedparser": "*",
+    "request": "*",
+    "handlebars": "*"
   },
   "devDependencies": {},
   "scripts": {

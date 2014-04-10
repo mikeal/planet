@@ -76,6 +76,9 @@ function build (name, blog, builddir, cb) {
   });
 }
 
+/**
+ * sets up the project directory
+ */
 function setupBuildDir (builddir) {
   try { fs.mkdirSync(builddir, 0777) } catch(e) {}
   try { fs.mkdirSync(path.join(builddir, 'db'), 0777) } catch(e) {}
@@ -253,6 +256,12 @@ function HTTPBuffer (buffer, headers) {
 }
 util.inherits(HTTPBuffer, events.EventEmitter)
 
+/**
+ * Run - this starts the app
+ * @param  {} port     port variabel
+ * @param  {} builddir the directory of project
+ * @return {}          null
+ */
 function run (port, builddir) {
   var assets;
   setupBuildDir(builddir)
