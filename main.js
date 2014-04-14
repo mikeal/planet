@@ -150,7 +150,7 @@ function createAssets (configpath, builddir, assets, cb) {
       , rsstemplate = files[1][1].toString()
       , opmltemplate = files[2][1].toString()
       ;
-      console.log(config);
+    
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
   	  if(err) throw err;
 

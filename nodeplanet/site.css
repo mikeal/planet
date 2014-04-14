@@ -5,6 +5,23 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
+@media(max-width: 1330px){
+  #links{
+    display:none;
+  }
+  .button-container{
+    display: block;
+  }
+}
+@media(min-width: 1330px){
+  #links{
+    display:block;
+  }
+  .button-container{
+    display: none;
+  }
+}
+
 body {
   font-family: PT Sans, arial, serif;
   text-align: center;
@@ -12,6 +29,26 @@ body {
   vertical-align: middle;
 }
 
+img{
+  border-radius: 10px;
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.header-section{
+  width: 100%;
+  overflow: hidden;
+}
+#title a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+}
 div#feedlink {
   position:absolute;
   top:10px;
@@ -23,13 +60,27 @@ div#opmllink {
   top:52px;
   right:10px;
 }
-
+.button-container{
+  float: left;
+  margin-left: calc( 50% - 66px); /*66 pixels is exactly half of the width of the button group*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.button-sites{
+  width: 100px;
+  padding: 15px;
+  border: 1px black solid;
+}
+.button-articles{
+  margin-top: 10px;
+  width: 100px;
+  padding: 15px;
+  border: 1px black solid;
+}
 div#title {
-  width:100%;
   font-size:40px;
   text-align:center;
-  margin-bottom:25px;
-  margin-top:10px;
+  padding-top:20px;
 }
 
 div#container {
@@ -37,6 +88,19 @@ div#container {
   width: 80%;
   text-align: left;
   margin: 0 auto;
+}
+
+.post img {
+  width: 100%;
+}
+.post iframe{
+  width: 100%;
+}
+.post pre{ /**  this is a code box **/
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+  border-radius: 3px 3px;
+  padding: 10px;
+  background-color: white;
 }
 
 div#posts {
@@ -54,9 +118,13 @@ div#links {
   background: #F6F6F6;
   box-shadow: 0 1px 2px rgba(0,0,0,0.5);
   border-radius: 3px 3px;
+  min-width: 175px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 div.post {
+  width: 80%;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 5%;
@@ -74,6 +142,7 @@ div.post-title {
 }
 
 div#sites-title {
+  margin-top: 5px;
   font-size:110%;
   margin-bottom:5px;
 }

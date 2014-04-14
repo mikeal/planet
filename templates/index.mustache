@@ -22,11 +22,14 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{url}}/site.rss" />
     <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="{{url}}/site.opml" />
 
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
     <title>{{title}}</title>
 
     <style type="text/css">
       {{css}}
     </style>
+    <link rel="stylesheet" href="/css/bootstrap.css">
 
   </head>
 
@@ -51,7 +54,20 @@
         </svg>
       </a>
     </div>
-    <div id="title"><a href="{{url}}">{{title}}</a></div>
+    <div class="header-section">
+      
+
+      <div id="title"><a href="{{url}}">{{title}}</a></div>
+      <div class="button-container">
+        <div class="button-sites">
+          Sites
+        </div>
+        <div class="button-articles">
+          Articles
+        </div>
+      </div>
+    </div>
+      
     
     <div id="posts">
       {{#posts}}
@@ -86,6 +102,22 @@
       ga('create', 'UA-33396402-5', 'planetnodejs.com');
       ga('send', 'pageview');
 
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $( ".button-sites" ).click(function() {
+        
+        $("#posts").css("display", "none");
+        $('#links').css("display", "block");
+        $('#links').css("margin-left", "calc( 50% - 92.5px)");
+        $('#links').css("float", "none");
+      });
+      $( ".button-articles" ).click(function() {
+        $("#posts").css("display", "block");
+        $('#links').css("display", "none");
+        $('#links').css("margin-left", "25px");
+        $('#links').css("float", "right");
+      });
     </script>
   </body>
 </html>
