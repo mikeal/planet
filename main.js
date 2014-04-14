@@ -25,7 +25,7 @@ function build (name, blog, builddir, cb) {
 
   var req = request(blog.feed)
     , parser = new feedparser();
-
+  
   req.on('error', function (error) {
     // handle any request errors
   });
@@ -106,7 +106,12 @@ function getconfig (p) {
   }
   return config
 }
-
+/**
+ * Is called from creatAssets
+ * @param  {[type]}   files [description]
+ * @param  {Function} cb    [description]
+ * @return {[type]}         [description]
+ */
 function readFiles (files, cb) {
   var data = {}
     , counter = 0
@@ -264,7 +269,7 @@ util.inherits(HTTPBuffer, events.EventEmitter)
  */
 function run (port, builddir) {
   var assets;
-  setupBuildDir(builddir)
+  setupBuildDir(builddir) //setup stuff
   createAssets(configpath, builddir, assets, function (a) {
     assets = a
     http.createServer(function (req, resp) {
