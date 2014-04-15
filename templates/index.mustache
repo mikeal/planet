@@ -106,14 +106,19 @@
     <script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
       $( ".button-sites" ).click(function() {
-        
+        $("#posts").css("opacity", "0");
         $("#posts").css("display", "none");
+
         $('#links').css("display", "block");
+        $("#links").css("opacity", "1");
         $('#links').css("margin-left", "calc( 50% - 92.5px)");
         $('#links').css("float", "none");
       });
       $( ".button-articles" ).click(function() {
         $("#posts").css("display", "block");
+        $("#posts").css("opacity", "1");
+
+        $("#links").css("opacity", "0");
         $('#links').css("display", "none");
         $('#links').css("margin-left", "25px");
         $('#links').css("float", "right");

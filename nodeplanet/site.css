@@ -120,7 +120,7 @@ div#links {
   border-radius: 3px 3px;
   min-width: 175px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 div.post {
