@@ -7,11 +7,15 @@
 
 @media(max-width: 874px){ /*for smaller devices*/
   #links{
-
     display:none;
   }
   .button-container{
     display: block;
+  }
+  #posts{
+    width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
   }
   
 }
@@ -24,6 +28,7 @@
     display: none;
   }
   #posts{
+    width: 60%; 
     margin-left: calc( 10% - 12.5px) !important;
     display: block;
   }
