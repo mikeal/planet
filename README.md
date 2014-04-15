@@ -1,4 +1,9 @@
-planet
+Planet Node
 ======
 
-A node.js planet (blog aggregator)
+This is the source code for Planet Node
+
+To run this on your own machine, simply type this command:
+- npm start
+- ***an alternative to this command would be 'node main.js' , however they both accomplish the same thing***
+

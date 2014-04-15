@@ -25,7 +25,7 @@ function build (name, blog, builddir, cb) {
 
   var req = request(blog.feed)
     , parser = new feedparser();
-
+  
   req.on('error', function (error) {
     // handle any request errors
   });
@@ -76,8 +76,11 @@ function build (name, blog, builddir, cb) {
   });
 }
 
+/**
+ * sets up the project directory
+ */
 function setupBuildDir (builddir) {
-  try { fs.mkdirSync(builddir, 0777) } catch(e) {}
+  try { fs.mkdirSync(builddir, 0777) } catch(e) {} //todo - figure out what these two lines do
   try { fs.mkdirSync(path.join(builddir, 'db'), 0777) } catch(e) {}
 }
 
@@ -103,7 +106,12 @@ function getconfig (p) {
   }
   return config
 }
-
+/**
+ * Is called from creatAssets
+ * @param  {[type]}   files [description]
+ * @param  {Function} cb    [description]
+ * @return {[type]}         [description]
+ */
 function readFiles (files, cb) {
   var data = {}
     , counter = 0
@@ -136,12 +144,13 @@ var templates = [path.join(__dirname, 'templates', 'index.mustache'), path.join(
 
 function createAssets (configpath, builddir, assets, cb) {
   readFiles(templates, function (files) {
+
     var config = getconfig(configpath)
       , indextemplate = files[0][1].toString()
       , rsstemplate = files[1][1].toString()
       , opmltemplate = files[2][1].toString()
       ;
-
+    
     fs.readdir(path.join(builddir, 'db'), function (err, files) {
   	  if(err) throw err;
 
@@ -253,9 +262,15 @@ function HTTPBuffer (buffer, headers) {
 }
 util.inherits(HTTPBuffer, events.EventEmitter)
 
+/**
+ * Run - this starts the app
+ * @param  {} port     port variable
+ * @param  {} builddir the directory of project
+ * @return {}          null
+ */
 function run (port, builddir) {
   var assets;
-  setupBuildDir(builddir)
+  setupBuildDir(builddir) //setup stuff database maybe?
   createAssets(configpath, builddir, assets, function (a) {
     assets = a
     http.createServer(function (req, resp) {
@@ -268,10 +283,10 @@ function run (port, builddir) {
       if (req.url === '/site.opml') {
         return assets.opml.emit('request', req, resp)
       }
-      resp.statusCode = 404
+      resp.statusCode = 404 //if the user requested none of the above locations, give them a 404
       resp.end()
     })
-    .listen(port, function () {
+    .listen(port, function () { //this is what starts the server and listens for requests
       console.log('http://localhost:'+port)
     })
   })

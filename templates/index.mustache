@@ -22,11 +22,14 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{url}}/site.rss" />
     <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="{{url}}/site.opml" />
 
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
     <title>{{title}}</title>
 
     <style type="text/css">
       {{css}}
     </style>
+    <link rel="stylesheet" href="/css/bootstrap.css">
 
   </head>
 
@@ -51,32 +54,45 @@
         </svg>
       </a>
     </div>
-    <div id="title"><a href="{{url}}">{{title}}</a></div>
-    <div id="container">
-      <div id="posts">
-        {{#posts}}
-          <div class="post">
-            <div class="post-title">
-              <span class="post-title"><a href="{{link}}">{{title}}</a></span>
-              <span class="byline"> by <a href="{{site.link}}">{{site.author}}</a></span>
-              <span class="post-displayDate"> on {{displayDate}}</span>
-            </div>
+    <div class="header-section">
+      
 
-            <div class="post-isoTimestamp" style="display:none">{{isoTimestamp}}</div>
-            <div class="post-id" style="display:none">{{_id}}</div>
-            <div class="post-description">{{{description}}}</div>
-          </div>
-        {{/posts}}
-      </div>
-      <div id="links">
-        <div id="sites-title">Sites</div>
-      {{#sitesArray}}
-        <div class="site-link"><a href="{{link}}">{{name}}</a></div>
-      {{/sitesArray}}
-        </br>
-        <div id="add-site"><a href="mailto:{{editorEmail}}?subject=Add my site to {{title}}&body=Title: %0A%0aFeed: %0A%0AAuthor Name: %0A%0ASite Url:%0A%0A">add your site?</a></div>
+      <div id="title"><a href="{{url}}">{{title}}</a></div>
+      <div class="button-container">
+        <div class="button-sites">
+          Sites
+        </div>
+        <div class="button-articles">
+          Articles
+        </div>
       </div>
     </div>
+      
+    
+    <div id="posts">
+      {{#posts}}
+        <div class="post">
+          <div class="post-title">
+            <span class="post-title"><a href="{{link}}">{{title}}</a></span>
+            <span class="byline"> by <a href="{{site.link}}">{{site.author}}</a></span>
+            <span class="post-displayDate"> on {{displayDate}}</span>
+          </div>
+
+          <div class="post-isoTimestamp" style="display:none">{{isoTimestamp}}</div>
+          <div class="post-id" style="display:none">{{_id}}</div>
+          <div class="post-description">{{{description}}}</div>
+        </div>
+      {{/posts}}
+    </div>
+    <div id="links">
+      <div id="sites-title">Sites</div>
+      {{#sitesArray}}
+      <div class="site-link"><a href="{{link}}">{{name}}</a></div>
+      {{/sitesArray}}
+      </br>
+      <div id="add-site"><a href="mailto:{{editorEmail}}?subject=Add my site to {{title}}&body=Title: %0A%0aFeed: %0A%0AAuthor Name: %0A%0ASite Url:%0A%0A">add your site?</a></div>
+    </div>
+    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -87,5 +103,27 @@
       ga('send', 'pageview');
 
     </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $( ".button-sites" ).click(function() {
+        $("#posts").css("opacity", "0");
+        $("#posts").css("display", "none");
+
+        $('#links').css("display", "block");
+        $("#links").css("opacity", "1");
+        $('#links').css("margin-left", "calc( 50% - 92.5px)");
+        $('#links').css("float", "none");
+      });
+      $( ".button-articles" ).click(function() {
+        $("#posts").css("display", "block");
+        $("#posts").css("opacity", "1");
+
+        $("#links").css("opacity", "0");
+        $('#links').css("display", "none");
+        $('#links').css("margin-left", "25px");
+        $('#links').css("float", "right");
+      });
+    </script>
+   
   </body>
 </html>
