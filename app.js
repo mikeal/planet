@@ -4,19 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var fs = require('fs');
-var path = require('path');
-var assert = require('assert');
-var events = require('events');
-var stream = require('stream');
-var util = require('util');
-var http = require('http');
-var url = require('url');
-var rfc822 = require('./rfc822');
-var feedparser = require('feedparser');
-var request    = require('request');
-var handlebars = require('handlebars');
-var crypto = require('crypto');
+
 
 require('./date')
 
