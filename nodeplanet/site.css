@@ -5,20 +5,27 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
-@media(max-width: 1330px){
+@media(max-width: 874px){ /*for smaller devices*/
   #links{
+
     display:none;
   }
   .button-container{
     display: block;
   }
+  
 }
-@media(min-width: 1330px){
+@media (min-width: 875px){ /*for larger devices*/
   #links{
+    margin-right: calc( 10% - 12.5px) !important;
     display:block;
   }
   .button-container{
     display: none;
+  }
+  #posts{
+    margin-left: calc( 10% - 12.5px) !important;
+    display: block;
   }
 }
 
@@ -39,6 +46,7 @@ img{
 .show{
   display: block;
 }
+.fixed { position: fixed; top: 10px; right: 1px;}
 .header-section{
   width: 100%;
   overflow: hidden;
@@ -121,6 +129,7 @@ div#links {
   min-width: 175px;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  overflow: scroll;
 }
 
 div.post {
