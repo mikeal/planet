@@ -45,22 +45,24 @@ img{
   border-radius: 10px;
 }
 
-.hide{
-  display: none;
-}
-.show{
-  display: block;
-}
+
 .header-section{
   width: 100%;
   overflow: hidden;
 }
 
+.hide-nav{
+  left: -300px !important;
+}
+.slide-content-over{
+  left: 300px !important;
+  position: relative;
+}
 
 nav.menu {
     position: fixed;
     z-index: 20;
-    background-color: #67b5d1;
+    background-image: url("/images/congruent_outline.png"); /*this is from http://subtlepatterns.com/congruent-pentagon-outline/ */
     overflow: hidden;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -112,15 +114,6 @@ nav.push-menu-left button.close-menu {
     padding: 10px 30px;
     background-color: #3184a1;
     color: #fff;
-}
-nav.push-menu-left {
-    left: -300px
-}
-body.pml-open nav.push-menu-left {
-    left: 0
-}
-body.pml-open #wrapper {
-    left: 300px
 }
 
 
