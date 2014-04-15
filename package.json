@@ -1,35 +1,20 @@
 {
-  "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
-  "name": "planet",
-  "description": "NodeJS News Aggregator",
-  "version": "0.2.0",
-  "homepage": "http://planetnodejs.com",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:mikeal/planet.git"
-  },
-  "main": "server.js",
-  "keywords": [
-    "planet",
-    "aggregator"
-  ],
-  "engines": {
-    "node": "*",
-    "npm": "*"
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/supervisor ./bin/www"
   },
   "dependencies": {
+    "express": "~4.0.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
     "feedparser": "*",
     "request": "*",
-    "handlebars": "*"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "fakeredis=true node ./node_modules/.bin/mocha --reporter spec && fakeredis=false node ./node_modules/.bin/mocha --reporter spec",
-    "start": "node server.js"
-  },
-  "domains": [
-    "www.planetnodejs.com",
-    "planetnodejs.com"
-  ],
-  "subdomain": "planet"
+    "supervisor": "^0.6.0"
+  }
 }
