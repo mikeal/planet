@@ -3,8 +3,6 @@ $( document ).ready(function() {
     $('#nav').addClass('hide-nav');
   });
   $('#open-side-bar').click(function(event) {
-
-    $('#content').removeClass('slide-content-over');
-    $('#nav').addClass('hide-nav');
+    $('#nav').removeClass('hide-nav');
   });
 });
