@@ -5,7 +5,7 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
-@media(max-device-width: 874px){ /*for smaller devices*/
+@media(max-width: 874px){ /*for smaller devices*/
   #posts, #links{
     width: 98% !important;
     margin-left: 1% !important;
@@ -16,7 +16,7 @@
 
   
 }
-@media (min-device-width: 875px){ /*for larger devices*/
+@media (min-width: 875px){ /*for larger devices*/
   #links{
     display: block !important;
   }

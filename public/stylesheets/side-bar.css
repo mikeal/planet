@@ -1,11 +1,11 @@
 /*
  * This css file is for side-bar related css only!
  */
-@media(max-device-width: 768px){ /*for smaller devices*/
+@media(max-width: 874px){ /*for smaller devices*/
 
   
 }
-@media (min-device-width: 769px){ /*for larger devices, we dont want the nav being displayed*/
+@media (min-width: 875px){ /*for larger devices, we dont want the nav being displayed*/
   nav{
     display: none; 
   }
