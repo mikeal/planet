@@ -7,16 +7,7 @@
 
 @media(max-device-width: 768px){ /*for smaller devices*/
   #links{
-<<<<<<< HEAD
     display:none !important;
-=======
-    display:none;
->>>>>>> 8ec3d6db2cde71ef24d8b9ae7319e0d1ba3ce3e9
-  }
-  #posts{
-    width: 98% !important;
-    margin-left: 1% !important;
-    margin-right: 1% !important;
   }
   #posts{
     width: 98% !important;
@@ -25,24 +16,8 @@
   }
   
 }
-<<<<<<< HEAD
 @media (min-device-width: 875px){ /*for larger devices*/
 
-=======
-@media (min-width: 875px){ /*for larger devices*/
-  #links{
-    margin-right: calc( 10% - 12.5px) !important;
-    display:block;
-  }
-  .button-container{
-    display: none;
-  }
-  #posts{
-    width: 60%; 
-    margin-left: calc( 10% - 12.5px) !important;
-    display: block;
-  }
->>>>>>> 8ec3d6db2cde71ef24d8b9ae7319e0d1ba3ce3e9
 }
 
 body {
@@ -56,83 +31,6 @@ img{
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-=======
-
-.header-section{
-  width: 100%;
-  overflow: hidden;
-}
-
-.hide-nav{
-  left: -300px !important;
-}
-.slide-content-over{
-  left: 300px !important;
-  position: relative;
-}
-
-nav.menu {
-    position: fixed;
-    z-index: 20;
-    background-image: url("/images/congruent_outline.png"); /*this is from http://subtlepatterns.com/congruent-pentagon-outline/ */
-    overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-nav.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav.menu a {
-    font-weight: 300;
-    color: #fff;
-}
-button.close-menu {
-    background-color: #3184a1;
-    color: #fff;
-}
-button.close-menu:focus {
-    outline: none
-}
-
-nav.push-menu-left {
-    top: 0;
-    width: 300px;
-    height: 100%;
-}
-nav.push-menu-left li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
-}
-nav.push-menu-left li:first-child {
-    border-top: none
-}
-nav.push-menu-left li:last-child {
-    border-bottom: none
-}
-nav.push-menu-left a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
-}
-nav.push-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-
-
-
-
->>>>>>> 8ec3d6db2cde71ef24d8b9ae7319e0d1ba3ce3e9
 #title a {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
