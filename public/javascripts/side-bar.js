@@ -76,5 +76,4 @@ function showNavItemSelected(el){
   });
 
   el.addClass('nav-selected');
-  console.log($(el));
 }
