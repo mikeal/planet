@@ -17,6 +17,10 @@ __2. Run the server__
 
 ***An alternative to this command would be 'node main.js' , however they both accomplish the same thing.***
 
+__3. Run the tests__
+
+    npm test
+
 *Like falling off a log.
 
 Enjoy!
