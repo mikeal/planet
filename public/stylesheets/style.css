@@ -6,26 +6,19 @@
 }
 
 @media(max-width: 874px){ /*for smaller devices*/
-  #links{
+  #posts, #links{
+    width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    float: none !important;
+  }
+  
 
-    display:none;
-  }
-  .button-container{
-    display: block;
-  }
   
 }
 @media (min-width: 875px){ /*for larger devices*/
   #links{
-    margin-right: calc( 10% - 12.5px) !important;
-    display:block;
-  }
-  .button-container{
-    display: none;
-  }
-  #posts{
-    margin-left: calc( 10% - 12.5px) !important;
-    display: block;
+    display: block !important;
   }
 }
 
@@ -40,92 +33,15 @@ img{
   border-radius: 10px;
 }
 
-.hide{
-  display: none;
+.hide-me{
+  display: none !important;
 }
-.show{
-  display: block;
-}
-.header-section{
-  width: 100%;
-  overflow: hidden;
-}
-
-
-nav.menu {
-    position: fixed;
-    z-index: 20;
-    background-color: #67b5d1;
-    overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-nav.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav.menu a {
-    font-weight: 300;
-    color: #fff;
-}
-button.close-menu {
-    background-color: #3184a1;
-    color: #fff;
-}
-button.close-menu:focus {
-    outline: none
-}
-
-nav.push-menu-left {
-    top: 0;
-    width: 300px;
-    height: 100%;
-}
-nav.push-menu-left li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
-}
-nav.push-menu-left li:first-child {
-    border-top: none
-}
-nav.push-menu-left li:last-child {
-    border-bottom: none
-}
-nav.push-menu-left a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
-}
-nav.push-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-nav.push-menu-left {
-    left: -300px
-}
-body.pml-open nav.push-menu-left {
-    left: 0
-}
-body.pml-open #wrapper {
-    left: 300px
-}
-
-
-
-
 #title a {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
 }
 div#feedlink {
   position:absolute;
@@ -138,35 +54,13 @@ div#opmllink {
   top:52px;
   right:10px;
 }
-.button-container{
-  float: left;
-  margin-left: calc( 50% - 66px); /*66 pixels is exactly half of the width of the button group*/
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.button-sites{
-  width: 100px;
-  padding: 15px;
-  border: 1px black solid;
-}
-.button-articles{
-  margin-top: 10px;
-  width: 100px;
-  padding: 15px;
-  border: 1px black solid;
-}
+
 div#title {
   font-size:40px;
   text-align:center;
   padding-top:20px;
 }
 
-div#container {
-  margin: 0 auto;
-  width: 80%;
-  text-align: left;
-  margin: 0 auto;
-}
 
 .post img {
   width: 100%;
@@ -183,14 +77,14 @@ div#container {
 
 div#posts {
   width: 60%;
-  margin-left: 20%;
   float: left;
   padding-bottom: 5%;
+  margin-left: calc( 10% - 12.5px);
+  display: block;
 }
 
 div#links {
   margin-left: 25px;
-  margin-right: 50px;
   float: right;
   width: calc(20% - 75px);
   background: #F6F6F6;
@@ -199,7 +93,10 @@ div#links {
   min-width: 175px;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  overflow: scroll;
+  margin-right: calc( 10% - 12.5px) !important;
+  display:block;
+  max-height: 100%;
+  overflow:scroll;
 }
 
 div.post {

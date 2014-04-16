@@ -1,0 +1,85 @@
+/*
+ * This css file is for side-bar related css only!
+ */
+@media(max-width: 874px){ /*for smaller devices*/
+
+  
+}
+@media (min-width: 875px){ /*for larger devices, we dont want the nav being displayed*/
+  nav{
+    display: none; 
+  }
+  #open-side-bar{
+    display: none;
+  }
+}
+#open-side-bar{
+  position: fixed;
+  left: -20px;
+  top: 10px;
+  background: grey;
+  font-size: 3em;
+  z-index: 999;
+  color: white;
+  width: 50px;
+  transition: all .2s ease-in-out;
+  border-radius: 3px;
+}
+.hide-nav{
+  left: -200px !important;
+}
+
+
+nav.menu {
+  left: 0px; /*needed to have transistion*/
+  position: fixed;
+  z-index: 20;
+  background-color: grey;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav.menu a {
+    font-weight: 300;
+    color: #fff;
+}
+.nav-spacer{
+  height: 70px;
+}
+
+nav.push-menu-left {
+    top: 0;
+    width: 200px;
+    height: 100%;
+}
+nav.push-menu-left li {
+    display: block;
+    text-align: center;
+    border-bottom: solid 1px #3184a1;
+    border-top: solid 1px #b5dbe9;
+}
+nav.push-menu-left li:first-child {
+    border-top: none
+}
+nav.push-menu-left li:last-child {
+    border-bottom: none
+}
+nav.push-menu-left a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
+nav.push-menu-left button.close-menu {
+    margin: 10px 0;
+    padding: 10px 30px;
+    background-color: #3184a1;
+    color: #fff;
+}
