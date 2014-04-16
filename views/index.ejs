@@ -27,7 +27,8 @@
     <title><%=data.title%></title>
 
     <link rel="stylesheet" href="/stylesheets/style.css">
-
+    <link rel="stylesheet" href="/stylesheets/side-bar.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
 
   <body>
@@ -43,7 +44,7 @@
 
 
     <div id="content">
-      <div class="hamburger"> SHOW ME THE NAV!</div>
+      <i id="open-side-bar" class="fa fa-bars"></i>
       <div id="feedlink">
         <a href="/site.rss">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewbox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
@@ -68,14 +69,7 @@
         
 
         <div id="title"><a href="<%=data.url%>"><%=data.title%></a></div>
-        <div class="button-container">
-          <div class="button-sites">
-            Sites
-          </div>
-          <div class="button-articles">
-            Articles
-          </div>
-        </div>
+
       </div>
         
       
@@ -120,26 +114,7 @@
 
     </script>
     <script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript">
-      $( ".button-sites" ).click(function() {
-        $("#posts").css("opacity", "0");
-        $("#posts").css("display", "none");
 
-        $('#links').css("display", "block");
-        $("#links").css("opacity", "1");
-        $('#links').css("margin-left", "calc( 50% - 92.5px)");
-        $('#links').css("float", "none");
-      });
-      $( ".button-articles" ).click(function() {
-        $("#posts").css("display", "block");
-        $("#posts").css("opacity", "1");
-
-        $("#links").css("opacity", "0");
-        $('#links').css("display", "none");
-        $('#links').css("margin-left", "25px");
-        $('#links').css("float", "right");
-      });
-    </script>
     <script src="/javascripts/classie.js" type="text/javascript"></script>
     <script src="/javascripts/side-bar.js" type="text/javascript"></script>
     <script src="/javascripts/app.js" type="text/javascript"></script>
