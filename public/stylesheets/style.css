@@ -5,19 +5,21 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
-@media(max-device-width: 768px){ /*for smaller devices*/
-  #links{
-    display:none !important;
-  }
-  #posts{
+@media(max-device-width: 874px){ /*for smaller devices*/
+  #posts, #links{
     width: 98% !important;
     margin-left: 1% !important;
     margin-right: 1% !important;
+    float: none !important;
   }
+  
+
   
 }
 @media (min-device-width: 875px){ /*for larger devices*/
-
+  #links{
+    display: block !important;
+  }
 }
 
 body {
@@ -31,6 +33,9 @@ img{
   border-radius: 10px;
 }
 
+.hide-me{
+  display: none !important;
+}
 #title a {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
@@ -90,6 +95,8 @@ div#links {
   padding-bottom: 10px;
   margin-right: calc( 10% - 12.5px) !important;
   display:block;
+  max-height: 100%;
+  overflow:scroll;
 }
 
 div.post {

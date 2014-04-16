@@ -5,9 +5,9 @@
 
   
 }
-@media (min-device-width: 769px){ /*for larger devices*/
+@media (min-device-width: 769px){ /*for larger devices, we dont want the nav being displayed*/
   nav{
-    display: none;
+    display: none; 
   }
   #open-side-bar{
     display: none;
@@ -23,10 +23,7 @@
   color: white;
   width: 50px;
   transition: all .2s ease-in-out;
-}
-#open-side-bar:hover {
-  left: -20px;
-
+  border-radius: 3px;
 }
 .hide-nav{
   left: -200px !important;
@@ -38,7 +35,6 @@ nav.menu {
   position: fixed;
   z-index: 20;
   background-color: grey;
-  /*background-image: url("/images/congruent_outline.png"); /*this is from http://subtlepatterns.com/congruent-pentagon-outline/ */
   overflow: hidden;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -55,12 +51,8 @@ nav.menu a {
     font-weight: 300;
     color: #fff;
 }
-button.close-menu {
-    background-color: #3184a1;
-    color: #fff;
-}
-button.close-menu:focus {
-    outline: none
+.nav-spacer{
+  height: 70px;
 }
 
 nav.push-menu-left {
