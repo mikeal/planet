@@ -5,12 +5,9 @@
   src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/font?kit=7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4') format('woff');
 }
 
-@media(max-width: 874px){ /*for smaller devices*/
+@media(max-device-width: 768px){ /*for smaller devices*/
   #links{
-    display:none;
-  }
-  .button-container{
-    display: block;
+    display:none !important;
   }
   #posts{
     width: 98% !important;
@@ -19,7 +16,7 @@
   }
   
 }
-@media (min-width: 875px){ /*for larger devices*/
+@media (min-device-width: 875px){ /*for larger devices*/
 
 }
 

@@ -1,10 +1,21 @@
 /*
  * This css file is for side-bar related css only!
  */
+@media(max-device-width: 768px){ /*for smaller devices*/
 
+  
+}
+@media (min-device-width: 769px){ /*for larger devices*/
+  nav{
+    display: none;
+  }
+  #open-side-bar{
+    display: none;
+  }
+}
 #open-side-bar{
   position: fixed;
-  left: -30px;
+  left: -20px;
   top: 10px;
   background: grey;
   font-size: 3em;
@@ -26,7 +37,8 @@ nav.menu {
   left: 0px; /*needed to have transistion*/
   position: fixed;
   z-index: 20;
-  background-image: url("/images/congruent_outline.png"); /*this is from http://subtlepatterns.com/congruent-pentagon-outline/ */
+  background-color: grey;
+  /*background-image: url("/images/congruent_outline.png"); /*this is from http://subtlepatterns.com/congruent-pentagon-outline/ */
   overflow: hidden;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
