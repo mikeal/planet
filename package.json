@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/supervisor ./bin/www"
+    "start": "./node_modules/.bin/supervisor ./bin/www",
+    "test": "./node_modules/.bin/mocha"
   },
   "dependencies": {
     "express": "~4.0.0",
@@ -16,5 +17,9 @@
     "feedparser": "*",
     "request": "*",
     "supervisor": "^0.6.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.3.0"
   }
 }
