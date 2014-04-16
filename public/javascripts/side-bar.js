@@ -18,6 +18,18 @@ $( document ).ready(function() {
     hideArticles();
     hideNav();
   });
+
+  /*
+  This function will close the nav if the user clicks outside of it
+   */
+  $(document).mouseup(function (e){
+    var container = $("#nav");
+
+    if (!container.is(e.target) && container.has(e.target).length === 0){
+      hideNav();
+    }
+  });
+
 });
 
 function hideNav(){
@@ -53,7 +65,7 @@ function hideSites(){
 }
 
 function isShown(el){
-  if ( ! el.hasClass('hide')){
+  if ( ! el.hasClass('hide-me')){
     return true;
   }
   else{
