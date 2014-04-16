@@ -83,3 +83,6 @@ nav.push-menu-left button.close-menu {
     background-color: #3184a1;
     color: #fff;
 }
+.nav-selected{
+  background: rgba(255,255,255,0.3);
+}
