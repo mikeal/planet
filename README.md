@@ -17,7 +17,7 @@ __2. Run the server__
 
 ***An alternative to this command would be 'node main.js' , however they both accomplish the same thing.***
 
-* Like falling off a log.
+*Like falling off a log.
 
 Enjoy!
-- [MadGlory](http://madglory.com)
+-- [MadGlory](http://madglory.com)
