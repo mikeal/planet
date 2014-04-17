@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/supervisor ./bin/www"
+    "start": "./node_modules/.bin/supervisor ./bin/www",
+    "test": "./node_modules/.bin/mocha"
   },
   "dependencies": {
+    "iou": "~2.0.0",
+    "underscore": "~1.6.0",
     "express": "~4.0.0",
     "static-favicon": "~1.0.0",
     "morgan": "~1.0.0",
@@ -15,6 +18,11 @@
     "ejs": "~0.8.5",
     "feedparser": "*",
     "request": "*",
-    "supervisor": "^0.6.0"
+    "supervisor": "^0.6.0",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.3.0"
   }
 }

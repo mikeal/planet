@@ -18,27 +18,26 @@ $( document ).ready(function() {
     hideArticles();
     hideNav();
   });
-  // This does not work properly. Only allows user to open and close nav once
-  // $(document).click(function(event) {
-    
-  //     if($('#nav').hasClass('hide-nav')){
-  //       console.log('nav hidden');
-  //     }
-  //     else{
-  //       console.log('nav shown');
-  //       $('body').on('click', function(event) {
-  //         if($(event.target).is('#nav') && ! $(event.target).is('#open-side-bar')){
+  $(document).click(function(event) {
+      //This eventually needs to be cleaned up
+      if($('#nav').hasClass('hide-nav') && ! $(event.target).is('#open-side-bar')){
+        console.log('User did not click menu icon, and the side-bar is closed ... not doing anything');
+      }
+      else if($(event.target).is('#open-side-bar')){
+        
+      }
+      else{
+        
+          if($(event.target).is('#nav') && ! $(event.target).is('#open-side-bar')){
             
-  //         }
-  //         else{
-  //           console.log('click did not come from nav, closing');
-  //           hideNav();
-  //         }
-  //       });
-  //     }
-    
-  // };
+          }
+          else{
+            console.log('click did not come from nav, closing');
+            hideNav();
+          }
 
+      }
+  });
   
 
 });
