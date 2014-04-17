@@ -27,14 +27,14 @@ $( document ).ready(function() {
         
       }
       else{
-        
-          if($(event.target).is('#nav') && ! $(event.target).is('#open-side-bar')){
-            
-          }
-          else{
-            console.log('click did not come from nav, closing');
-            hideNav();
-          }
+      
+        if($(event.target).is('#nav') && ! $(event.target).is('#open-side-bar')){
+          
+        }
+        else{
+          console.log('click did not come from nav, closing');
+          hideNav();
+        }
 
       }
   });
