@@ -18,19 +18,34 @@ $( document ).ready(function() {
     hideArticles();
     hideNav();
   });
+  // This does not work properly. Only allows user to open and close nav once
+  // $(document).click(function(event) {
+    
+  //     if($('#nav').hasClass('hide-nav')){
+  //       console.log('nav hidden');
+  //     }
+  //     else{
+  //       console.log('nav shown');
+  //       $('body').on('click', function(event) {
+  //         if($(event.target).is('#nav') && ! $(event.target).is('#open-side-bar')){
+            
+  //         }
+  //         else{
+  //           console.log('click did not come from nav, closing');
+  //           hideNav();
+  //         }
+  //       });
+  //     }
+    
+  // };
 
-  /*
-  This function will close the nav if the user clicks outside of it
-   */
-  $(document).mouseup(function (e){
-    var container = $("#nav");
-
-    if (!container.is(e.target) && container.has(e.target).length === 0){
-      hideNav();
-    }
-  });
+  
 
 });
+
+
+
+
 
 function hideNav(){
   $('#nav').addClass('hide-nav');
