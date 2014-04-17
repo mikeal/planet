@@ -2,35 +2,44 @@
 <!doctype html>
 <html lang="en" xmlns:og="http://ogp.me/ns#">
   <head>
-    <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords" content="<%=data.joinedTags%>" />
-    <meta name="description" content="<%=data.title%>" />
+  <title><%= data.title %></title>
 
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=8" />
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="Planet Node.js rounds up the latest news from the community.">
+  <meta name="keywords" content="Node.js, NodeJS, Node">
+  <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="<%=data.title%>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%=data.url%>" />
-    <meta property="og:image" content="<%=data.image%>" />
+  <!-- OpenGraph -->
+  <meta property="og:description" content="Planet Node.js rounds up the latest news from the community." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="<%=data.title%>" />
+  <meta property="og:title" content="<%=data.title%>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%=data.url%>" />
+  <meta property="og:image" content="<%=data.image%>" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
-    <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
+  <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" />
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
-    <title><%=data.title%></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/side-bar.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/side-bar.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <script>window.html5 || document.write('<script src="/assets/js/vendor/html5shiv.js"><\/script>')</script>
+  <![endif]-->
+
   </head>
 
   <body>
@@ -40,7 +49,7 @@
             <li class="nav-spacer"></li>
             <li><a id="nav-option-articles">Articles</a></li>
             <li><a id="nav-option-sites">Sites</a></li>
-            
+
         </ul>
     </nav><!-- /push menu left -->
 
@@ -69,13 +78,13 @@
         </a>
       </div>
       <div class="header-section">
-        
+
 
         <div id="title"><a href="<%=data.url%>"><%=data.title%></a></div>
 
       </div>
-        
-      
+
+
       <div id="posts">
         <% for(var i=0; i<data.posts.length; i++) { %>
           <div class="post">
@@ -100,12 +109,12 @@
         <div id="add-site"><a href="mailto:{{editorEmail}}?subject=Add my site to {{title}}&body=Title: %0A%0aFeed: %0A%0AAuthor Name: %0A%0ASite Url:%0A%0A">add your site?</a></div>
       </div>
     </div>
-      
 
 
 
 
-    
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
