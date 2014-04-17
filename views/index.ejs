@@ -47,8 +47,8 @@
     <nav id="nav" class="menu push-menu-left hide-nav">
         <ul>
             <li class="nav-spacer"></li>
-            <li><a id="nav-option-articles">Articles</a></li>
-            <li><a id="nav-option-sites">Sites</a></li>
+            <li><a id="nav-option-articles" class="nav-option">Articles</a></li>
+            <li><a id="nav-option-sites" class="nav-option">Sites</a></li>
 
         </ul>
     </nav><!-- /push menu left -->
@@ -57,26 +57,7 @@
 
     <div id="content">
       <i id="open-side-bar" class="fa fa-bars"></i>
-      <div id="feedlink">
-        <a href="/site.rss">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewbox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-            <g>
-              <path d="M32,32h-4.569C27.431,16.875,15.125,4.573,0,4.573V0C17.641,0,32,14.355,32,32L32,32z"></path>
-              <path d="M22.859,32h-4.574c0-10.082-8.207-18.285-18.285-18.285V9.143C12.603,9.143,22.859,19.398,22.859,32L22.859,32z"></path>
-              <path d="M13.719,32H9.141c0-5.043-4.094-9.143-9.141-9.143v-4.572C7.562,18.285,13.719,24.438,13.719,32L13.719,32z"></path>
-              <path d="M4.571,32c0-2.523-2.04-4.57-4.571-4.57V32H4.571z"></path>
-            </g>
-          </svg>
-        </a>
-      </div>
-      <div id="opmllink">
-        <a href="/site.opml">
-          <svg fill="#000000" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
-            <path d="M 256.00,128.00c-70.688,0.00-128.00,57.312-128.00,128.00s 57.312,128.00, 128.00,128.00s 128.00-57.312, 128.00-128.00S 326.688,128.00, 256.00,128.00z M 256.00,352.00 c-53.008,0.00-96.00-42.992-96.00-96.00s 42.992-96.00, 96.00-96.00s 96.00,42.992, 96.00,96.00S 309.008,352.00, 256.00,352.00z M 256.00,0.00C 114.608,0.00,0.00,114.608,0.00,256.00s 114.608,256.00, 256.00,256.00s 256.00-114.608, 256.00-256.00 S 397.392,0.00, 256.00,0.00z M 256.00,448.00C 149.968,448.00, 64.00,362.032, 64.00,256.00S 149.968,64.00, 256.00,64.00s 192.00,85.968, 192.00,192.00S 362.032,448.00, 256.00,448.00z M 256.00,208.00c-26.512,0.00-48.00,21.488-48.00,48.00 s 21.488,48.00, 48.00,48.00s 48.00-21.488, 48.00-48.00S 282.512,208.00, 256.00,208.00z" >
-            </path>
-          </svg>
-        </a>
-      </div>
+
       <div class="header-section">
 
 
@@ -134,8 +115,9 @@
     <script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
 
     <script src="/javascripts/classie.js" type="text/javascript"></script>
-    <script src="/javascripts/side-bar.js" type="text/javascript"></script>
     <script src="/javascripts/app.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.outside-events.min.js" type="text/javascript"></script>
+    <script src="/javascripts/side-bar.js" type="text/javascript"></script>
     <script type="text/javascript">
     var addthis_config = {
       data_track_addressbar : true,
