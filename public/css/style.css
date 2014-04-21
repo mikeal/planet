@@ -1559,6 +1559,16 @@ input:focus:-ms-input-placeholder {
 .classic-blog .meta {
     margin-bottom: 10px
 }
+.classic-blog .meta span:before {
+    display: inline-block;
+    content: "|";
+    padding: 0 7px 0 4px;
+    color: #9f9f9f;
+}
+.classic-blog .meta span:first-child:before {
+    display: none;
+    padding: 0;
+}
 .classic-blog h2.post-title {
     margin: 0
 }
