@@ -77,14 +77,14 @@ p {
 }
 a {
     color: #1abb9c;
-    -webkit-transition: all 200ms ease-in;
+    /*-webkit-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;*/
 }
 a:hover,
 a:focus {
-    color: #2e2e2e;
-    text-decoration: none;
+    /*color: #2e2e2e;*/
+    /*text-decoration: none;*/
 }
 .colored {
     color: #1abb9c
