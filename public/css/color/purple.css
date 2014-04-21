@@ -1,0 +1,174 @@
+.spinner,
+.tp-loader,
+#fancybox-loading div {
+    border-left: 3px solid rgba(155, 89, 182,.15) !important;
+    border-right: 3px solid rgba(155, 89, 182,.15) !important;
+    border-bottom: 3px solid rgba(155, 89, 182,.15) !important;
+    border-top: 3px solid rgba(155, 89, 182,.8) !important;
+}
+a {
+    color: #9b59b6;
+}
+.colored {
+    color: #9b59b6
+}
+.post-title a:hover {
+    color: #9b59b6
+}
+ul.circled li:before {
+    color: #9b59b6;
+}
+.lead.lite a {
+    border-bottom: 1px solid #9b59b6;
+}
+.lead.lite a:hover {
+    color: #9b59b6
+}
+.footer a:hover {
+    color: #9b59b6
+}
+.nav > li > a:hover {
+    color: #9b59b6;
+}
+.nav > li.current > a {
+    color: #9b59b6;
+}
+.navbar .nav .open > a,
+.navbar .nav .open > a:hover,
+.navbar .nav .open > a:focus {
+    color: #9b59b6;
+}
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-submenu:hover > a,
+.navbar .dropdown-submenu:focus > a,
+.navbar .dropdown-menu > .active > a,
+.navbar .dropdown-menu > .active > a:hover,
+.navbar .dropdown-menu > .active > a:focus {
+    color: #9b59b6;
+}
+.btn,
+.parallax .btn-submit,
+.btn-submit {
+    background: #9b59b6;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.parallax .btn-submit:hover {
+    background: #8a4fa2;
+}
+.newsletter-wrapper #mc_embed_signup .button {
+    background: #9b59b6;
+}
+.filter li a:hover {
+    color: #9b59b6
+}
+.filter li a.active {
+    color: #9b59b6;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	TOOLTIP
+/*-----------------------------------------------------------------------------------*/
+.tooltip-inner {
+    background-color: #9b59b6;
+}
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+    border-top-color: #9b59b6
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #9b59b6
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #9b59b6
+}
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bottom-left .tooltip-arrow,
+.tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #9b59b6
+}
+.services-1 .col-wrapper:hover,
+.services-1 .col-wrapper:hover:before {
+    border-color: #9b59b6
+}
+.services-3 .icon i.icn {
+    color: #9b59b6;
+    border: 2px solid #9b59b6;
+}
+.services-3 .col:hover i.icn {
+    background-color: #9b59b6;
+}
+.panel-title > a:hover {
+    color: #9b59b6
+}
+.progress-list li em {
+    color: #9b59b6;
+}
+.progress.plain {
+    border: 1px solid #9b59b6;
+}
+.progress.plain .bar {
+    background: #9b59b6;
+}
+.meta.tags a:hover {
+    color: #9b59b6
+}
+.owl-carousel .owl-controls .owl-prev:hover,
+.owl-carousel .owl-controls .owl-next:hover {
+    border: 1px solid #9b59b6;
+    color: #9b59b6;
+}
+.navigation a:hover {
+    border: 1px solid #9b59b6;
+    color: #9b59b6;
+}
+.tp-caption a {
+    color: #9b59b6
+}
+#testimonials .author {
+    color: #9b59b6;
+}
+.tabs-top .tab a:hover,
+.tabs-top .tab.active a {
+    color: #9b59b6
+}
+.parallax a:hover {
+    color: #9b59b6
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    border: 1px solid #9b59b6;
+    color: #9b59b6;
+}
+.sidebox a:hover {
+    color: #9b59b6
+}
+#comments .info h2 a:hover {
+    color: #9b59b6
+}
+#comments a.reply-link:hover {
+    color: #9b59b6
+}
+.pricing .plan h4 span {
+    color: #9b59b6
+}
+.bonfire-slideout-button:hover {
+	color: #9b59b6;
+}
+.bonfire-slideout-close:hover {
+	color: #9b59b6;
+}
+.bonfire-slideout-content .btn-submit {
+    background: #9b59b6
+}
+@media (max-width: 991px) { 
+	.navbar-nav > li > a,
+	.navbar-nav > li > a:focus {
+	    color: #9b59b6
+	}
+}
