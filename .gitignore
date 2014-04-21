@@ -1,3 +1,10 @@
 build/
 node_modules/
 npm-debug.log
+
+.sass-cache
+.idea
+*.iml
+*.sublime-project
+*.sublime-workspace
+.DS_Store
