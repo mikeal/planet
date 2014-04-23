@@ -1,0 +1,52 @@
+
+@media( min-width: 769px){
+    .footer{
+        height: 100px;
+    }
+    .footer p{
+        margin-top:40px;
+    }
+}
+@media( max-width: 768px){
+    .sub-footer .container .pull-right{
+        text-align: center !important;
+        float: none !important;
+    }
+    .sub-footer .container .pull-left{
+        text-align: center !important;
+        float: none !important;
+
+    }
+}
+
+img{
+    width: 100%;
+}
+
+.light-wrapper{
+    padding-top: 70px;
+}
+.footer {
+    background: #303030;
+    color: #cacaca;
+    text-align: center;
+}
+.footer a {
+    color: #cacaca
+}
+.footer a:hover {
+    color: #1abb9c
+}
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+    color: #f0f0f0
+}
+
+.widget h2, .post-content h2{
+    margin-top: 0px;
+}
+
