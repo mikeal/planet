@@ -7,16 +7,15 @@
         margin-top:40px;
     }
 }
-@media( max-width: 768px){
-    .sub-footer .container .pull-right{
-        text-align: center !important;
-        float: none !important;
-    }
-    .sub-footer .container .pull-left{
-        text-align: center !important;
-        float: none !important;
 
+.sub-footer .container .pull-right{
+        text-align: center !important;
+        float: none !important;
     }
+.sub-footer .container .pull-left{
+    text-align: center !important;
+    float: none !important;
+
 }
 
 img{
