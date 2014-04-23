@@ -21,7 +21,10 @@
 img{
     width: 100%;
 }
-
+#logo{
+    width: 19%;
+    margin-left: 15px;
+}
 .light-wrapper{
     padding-top: 70px;
 }
