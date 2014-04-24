@@ -15,18 +15,20 @@
 .sub-footer .container .pull-left{
     text-align: center !important;
     float: none !important;
+}
+
+.planet-logo {
+    height: 70px;
+    width: auto;
 
 }
 
-img{
-    width: 100%;
-}
-#logo{
-    width: 19%;
-    margin-left: 15px;
+.navbar-brand {
+    height: 70px;
+    padding: 0px;
 }
 .light-wrapper{
-    padding-top: 70px;
+    padding-top: 100px;
 }
 .footer {
     background: #303030;
