@@ -26,9 +26,9 @@
   <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" />
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
 
   <link href="/type/fontello.css" rel="stylesheet">
 
@@ -42,28 +42,20 @@
 <body>
 <div class="body-wrapper">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
+    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img id="logo" src="http://nodejs.org/images/logos/nodejs.png" alt="">
+        <a class="navbar-brand" href="#"><img class="planet-logo" src="http://nodejs.org/images/logos/nodejs.png" alt=""></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-        <!-- <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search...">
-          </div>
-          <button type="submit" class="btn btn-default">Go!</button>
-        </form>
- -->
+      <div class="collapse navbar-collapse" id="bs-navbar-collapse">
         <ul class="nav navbar-nav navbar-right hidden-xl hidden-lg hidden-md hidden-sm">
           <li class="active"><a href="#" id="nav-option-articles">Articles</a></li>
           <li class=""><a href="#" id="nav-option-sites">Sites</a></li>
