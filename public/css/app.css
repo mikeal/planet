@@ -7,7 +7,14 @@
         margin-top:40px;
     }
 }
-
+@media(min-width: 1300px){
+    img{
+        max-width: 60%;
+    }
+}
+img {
+    width: 100%;
+}
 .sub-footer .container .pull-right{
         text-align: center !important;
         float: none !important;

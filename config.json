@@ -171,6 +171,6 @@
   "url": "http://www.planetnodejs.com",
   "image": "http://nodejs.org/logo.png",
   "description": "Community blog aggregator for node.js",
-  "editorEmail": "mikeal.rogers@gmail.com",
+  "editorEmail": "bobrown101@gmail.com",
   "css": "./site.css"
 }
