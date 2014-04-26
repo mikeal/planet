@@ -5,9 +5,27 @@
 .light-wrapper{
     padding-top: 100px;
 }
+<<<<<<< HEAD
 
 .widget h2, .post-content h2{
     margin-top: 0px;
+=======
+@media(min-width: 1300px){
+    img{
+        max-width: 60%;
+    }
+}
+img {
+    width: 100%;
+}
+.sub-footer .container .pull-right{
+        text-align: center !important;
+        float: none !important;
+    }
+.sub-footer .container .pull-left{
+    text-align: center !important;
+    float: none !important;
+>>>>>>> Added mongo db. Not sure if async yet
 }
 
 /*-----------------------------------------------------------------------------------*/

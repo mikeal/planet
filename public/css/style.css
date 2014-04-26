@@ -33,9 +33,6 @@ figure img {
 iframe {
     border: none
 }
-img {
-    width: 100%;
-}
 ::selection {
     background: #fefac7; /* Safari */
     color: #555555;
