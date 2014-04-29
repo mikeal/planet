@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title><%= data.title %></title>
+  <title>Planet Node JS</title>
 
   <meta name="description" content="Planet Node.js rounds up the latest news from the community.">
   <meta name="keywords" content="Node.js, NodeJS, Node">
@@ -14,16 +14,16 @@
   <!-- OpenGraph -->
   <meta property="og:description" content="Planet Node.js rounds up the latest news from the community." />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="<%=data.title%>" />
+  <!--<meta property="og:site_name" content="<%=data.title%>" />
   <meta property="og:title" content="<%=data.title%>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%=data.url%>" />
-  <meta property="og:image" content="<%=data.image%>" />
+  <meta property="og:image" content="<%=data.image%>" /> -->
 
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
-  <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" />
+  <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
+  <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" /> -->
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
       <div class="row">
         <div id="articles" class="col-sm-8 col-md-9 col-lg-10">
           <div class="classic-blog">
-          <%=test[0].email%>
+          
             <% for(var i=0; i<data.posts.length; i++) { %>
               <div class="post well well-lg">
                 <div class="post-content image-caption">
