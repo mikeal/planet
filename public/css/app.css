@@ -1,35 +1,67 @@
+/*-----------------------------------------------------------------------------------*/
+/*  GLOBAL
+/*-----------------------------------------------------------------------------------*/
 
-@media( min-width: 769px){
-    .footer{
-        height: 100px;
-    }
-    .footer p{
-        margin-top:40px;
-    }
+.light-wrapper{
+    padding-top: 100px;
 }
 
-.sub-footer .container .pull-right{
-        text-align: center !important;
-        float: none !important;
-    }
-.sub-footer .container .pull-left{
-    text-align: center !important;
-    float: none !important;
+.widget h2, .post-content h2{
+    margin-top: 0px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  NAV
+/*-----------------------------------------------------------------------------------*/
+
+.navbar-header {
+    background-color: #47483d;
+}
+.navbar-default {
+    background-color: #47483d;
+}
+.navbar-default .navbar-toggle {
+    border-color: #47483d;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    border-color: #8fc84c;
+    background: none;
+}
+.navbar-nav {
+    background-color: #cecece;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #8fc84c;
+}
+
+.navbar-collapse {
+    background-color: #cecece;
+}
+.nav-list {
+    margin-left: 20px;
+    font-weight: bold;
+}
+.navbar-toggle {
+    margin-right: 25px;
+    margin-top: 17px;
 }
 
 .planet-logo {
-    height: 70px;
-    width: auto;
-
+    width: 300px;
+    margin-top: 19px;
+    padding-left: 30px;
 }
 
 .navbar-brand {
     height: 70px;
     padding: 0px;
 }
-.light-wrapper{
-    padding-top: 100px;
-}
+
+/*-----------------------------------------------------------------------------------*/
+/*  FOOTER
+/*-----------------------------------------------------------------------------------*/
+
 .footer {
     background: #303030;
     color: #cacaca;
@@ -50,7 +82,26 @@
     color: #f0f0f0
 }
 
-.widget h2, .post-content h2{
-    margin-top: 0px;
+.sub-footer .container .pull-right{
+    text-align: center !important;
+    float: none !important;
 }
+.sub-footer .container .pull-left{
+    text-align: center !important;
+    float: none !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  MEDIA QUERIES
+/*-----------------------------------------------------------------------------------*/
+
+@media( min-width: 769px){
+    .footer{
+        height: 100px;
+    }
+    .footer p{
+        margin-top:40px;
+    }
+}
+
 
