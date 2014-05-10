@@ -70,16 +70,16 @@
         <div id="articles" class="col-sm-8 col-md-9 col-lg-10">
           <div class="classic-blog">
           
-            <% for(var i=0; i<data.posts.length; i++) { %>
+            <% for(var i=0; i<data.length; i++) { %>
               <div class="post well well-lg">
                 <div class="post-content image-caption">
                   <h2 class="post-title">
-                    <a href="<%= data.posts[i].link %>"><%= data.posts[i].title %></a>
+                    <a href="<%= data.posts[i].link %>"><%= data[i].title %></a>
                   </h2>
                   <div class="meta">
-                    <span class="date">Posted on <a href="#"><%=data.posts[i].displayDate%></a></span>
+                    <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
                     <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
-                    <span class="author">Author <a href=""><%=data.posts[i].site.author%></a></span>
+                    <span class="author">Author <a href=""><%=data[i].site.author%></a></span>
                     <div
                       class="addthis_toolbox addthis_default_style addthis_16x16_style"
                       addthis:url="<%=data.posts[i].link%>"
@@ -95,8 +95,8 @@
                   <!-- /.meta -->
 
                   <div class="post-isoTimestamp" style="display:none"><%=data.posts[i].isoTimestamp%></div>
-                  <div class="post-id" style="display:none"><%=data.posts[i]._id%></div>
-                  <div class="post-description"><%- data.posts[i].description %></div>
+                  <div class="post-id" style="display:none"><%=data[i]._id%></div>
+                  <div class="post-description"><%- data[i].description %></div>
                 </div>
                 <!-- /.post-content -->
               </div>
@@ -119,11 +119,11 @@
           <div class="sidebox widget well">
             <h2 class="widget-title">Sites</h2>
             <ul class='post-list'>
-              <% for(var i=0; i<data.sitesArray.length; i++) { %>
+              <!-- <% for(var i=0; i<data.sitesArray.length; i++) { %>
                 <li>
                   <h6><a href="<%=data.sitesArray[i].link%>"><%=data.sitesArray[i].name%></a></h6>
                 </li>
-              <% } %>
+              <% } %> -->
             </ul>
             <!-- /.post-list -->
           </div>
