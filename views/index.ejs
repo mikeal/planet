@@ -11,21 +11,12 @@
   <meta name="keywords" content="Node.js, NodeJS, Node">
   <meta name="robots" content="index, follow" />
 
-  <!-- OpenGraph -->
-  <meta property="og:description" content="Planet Node.js rounds up the latest news from the community." />
-  <meta property="og:locale" content="en_US" />
-  <!--<meta property="og:site_name" content="<%=data.title%>" />
-  <meta property="og:title" content="<%=data.title%>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="<%=data.url%>" />
-  <meta property="og:image" content="<%=data.image%>" /> -->
 
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-  <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
-  <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" /> -->
 
   <!-- Latest compiled and minified CSS -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/app.css">
@@ -51,7 +42,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img class="planet-logo" src="/images/planetnodejs-logo.svg" alt=""></a>
+        <a class="navbar-brand" href="#">
+          
+          <h1 class='logo'>PlANET NODE.JS</h1>
+        </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,16 +68,16 @@
               <div class="post well well-lg">
                 <div class="post-content image-caption">
                   <h2 class="post-title">
-                    <a href="<%= data.posts[i].link %>"><%= data[i].title %></a>
+                    <a href="<%= data[i].link %>"><%= data[i].title %></a>
                   </h2>
                   <div class="meta">
                     <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
                     <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
-                    <span class="author">Author <a href=""><%=data[i].site.author%></a></span>
+                    <span class="author">Author <a href=""></a></span>
                     <div
                       class="addthis_toolbox addthis_default_style addthis_16x16_style"
-                      addthis:url="<%=data.posts[i].link%>"
-                      addthis:title="<%=data.posts[i].title%>"
+                      addthis:url="<%=data[i].link%>"
+                      addthis:title="<%=data[i].title%>"
                     >
                       <a class="addthis_button_facebook"></a>
                       <a class="addthis_button_twitter"></a>
@@ -94,36 +88,23 @@
                   </div>
                   <!-- /.meta -->
 
-                  <div class="post-isoTimestamp" style="display:none"><%=data.posts[i].isoTimestamp%></div>
+                  <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
                   <div class="post-id" style="display:none"><%=data[i]._id%></div>
-                  <div class="post-description"><%- data[i].description %></div>
+                  <div class="post-description"><%- data[i].content %></div>
                 </div>
                 <!-- /.post-content -->
               </div>
               <!-- /.post -->
             <% } %>
           </div>
-          <!-- <div class="pagination">
-            <ul>
-              <li><a href="#">Prev</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </div> -->
-          <!-- /.pagination -->
+          
 
         </div>
         <aside id="sites" class="col-sm-4 col-md-3 col-lg-2 lp30 hidden-xs sidebar">
           <div class="sidebox widget well">
             <h2 class="widget-title">Sites</h2>
             <ul class='post-list'>
-              <!-- <% for(var i=0; i<data.sitesArray.length; i++) { %>
-                <li>
-                  <h6><a href="<%=data.sitesArray[i].link%>"><%=data.sitesArray[i].name%></a></h6>
-                </li>
-              <% } %> -->
+              
             </ul>
             <!-- /.post-list -->
           </div>

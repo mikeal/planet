@@ -12,9 +12,8 @@ router.get('/', function(req, res) {
     I plan on using the query for multiple pages - aka first 10 articles on 1 page, then next 10 on 2nd page...so on
     Add a simple if statement to sort through them
      */
-  
     res.render(
-      'test', {data: posts}
+      'index', {data: posts}
     );
       
   });

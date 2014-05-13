@@ -1,6 +1,7 @@
 build/
 node_modules/
 npm-debug.log
+TODO.txt
 data/*
 .sass-cache
 .idea

@@ -5,33 +5,18 @@
 .light-wrapper{
     padding-top: 100px;
 }
-<<<<<<< HEAD
 
 .widget h2, .post-content h2{
     margin-top: 0px;
-=======
-@media(min-width: 1300px){
-    img{
-        max-width: 60%;
-    }
 }
-img {
-    width: 100%;
-}
-.sub-footer .container .pull-right{
-        text-align: center !important;
-        float: none !important;
-    }
-.sub-footer .container .pull-left{
-    text-align: center !important;
-    float: none !important;
->>>>>>> Added mongo db. Not sure if async yet
-}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  NAV
 /*-----------------------------------------------------------------------------------*/
-
+.navbar {
+    font-family: 'Coda', cursive;
+}
 .navbar-header {
     background-color: #47483d;
 }
@@ -65,12 +50,19 @@ img {
     margin-top: 17px;
 }
 
-.planet-logo {
-    width: 300px;
+.logo {
     margin-top: 19px;
-    padding-left: 30px;
+    background-image: url('/images/planetnodejs-logo.svg');
+    background-repeat: no-repeat;
+    padding-left: 85px;
+    font-family: 'Open Sans';
+    color: white;
+    background-position: right -10px top 4px;
+    font-size: 30px;
 }
-
+.planet-logo-text{
+    float: right;
+}
 .navbar-brand {
     height: 70px;
     padding: 0px;
