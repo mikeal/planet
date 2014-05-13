@@ -1,7 +1,10 @@
 build/
 node_modules/
 npm-debug.log
+<<<<<<< HEAD
 TODO.txt
+=======
+>>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
 data/*
 .sass-cache
 .idea
