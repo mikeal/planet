@@ -160,12 +160,5 @@
       "author": "Francois Marier",
       "link": "http://feeding.cloud.geek.nz/"
     }
-  },
-  "title": "Planet Node.js",
-  "tags": [ "node","nodejs","planet","javascript","developer","node.js","community" ],
-  "url": "http://www.planetnodejs.com",
-  "image": "http://nodejs.org/logo.png",
-  "description": "Community blog aggregator for node.js",
-  "editorEmail": "bobrown101@gmail.com",
-  "css": "./site.css"
+  }
 }

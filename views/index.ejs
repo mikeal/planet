@@ -11,25 +11,9 @@
   <meta name="keywords" content="Node.js, NodeJS, Node">
   <meta name="robots" content="index, follow" />
 
-<<<<<<< HEAD
 
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-=======
-  <!-- OpenGraph -->
-  <meta property="og:description" content="Planet Node.js rounds up the latest news from the community." />
-  <meta property="og:locale" content="en_US" />
-  <!--<meta property="og:site_name" content="<%=data.title%>" />
-  <meta property="og:title" content="<%=data.title%>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="<%=data.url%>" />
-  <meta property="og:image" content="<%=data.image%>" /> -->
-
-  <link rel="shortcut icon" href="/images/favicon.ico">
-
-  <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="<%=data.url%>/site.rss" />
-  <link rel="alternate" type="text/x-opml" title="RSS Subscription List" href="<%=data.url%>/site.opml" /> -->
->>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
 
   <!-- Latest compiled and minified CSS -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -84,20 +68,13 @@
               <div class="post well well-lg">
                 <div class="post-content image-caption">
                   <h2 class="post-title">
-<<<<<<< HEAD
                     <a href="<%= data[i].link %>"><%= data[i].title %></a>
-=======
-                    <a href="<%= data.posts[i].link %>"><%= data[i].title %></a>
->>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
                   </h2>
                   <div class="meta">
                     <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
                     <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
-<<<<<<< HEAD
                     <span class="author">Author <a href=""></a></span>
-=======
-                    <span class="author">Author <a href=""><%=data[i].site.author%></a></span>
->>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
+
                     <div
                       class="addthis_toolbox addthis_default_style addthis_16x16_style"
                       addthis:url="<%=data[i].link%>"
@@ -112,15 +89,9 @@
                   </div>
                   <!-- /.meta -->
 
-<<<<<<< HEAD
                   <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
                   <div class="post-id" style="display:none"><%=data[i]._id%></div>
                   <div class="post-description"><%- data[i].content %></div>
-=======
-                  <div class="post-isoTimestamp" style="display:none"><%=data.posts[i].isoTimestamp%></div>
-                  <div class="post-id" style="display:none"><%=data[i]._id%></div>
-                  <div class="post-description"><%- data[i].description %></div>
->>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
                 </div>
                 <!-- /.post-content -->
               </div>
@@ -134,15 +105,13 @@
           <div class="sidebox widget well">
             <h2 class="widget-title">Sites</h2>
             <ul class='post-list'>
-<<<<<<< HEAD
+                <% for (var i = 0; i < sitesList.length; i++) {%>
+                
+                  <li>
+                    <h6><a href="<%=sitesList[i].link%>"><%=sitesList[i].name%></a></h6>
+                  </li>
+                <% } %>
               
-=======
-              <!-- <% for(var i=0; i<data.sitesArray.length; i++) { %>
-                <li>
-                  <h6><a href="<%=data.sitesArray[i].link%>"><%=data.sitesArray[i].name%></a></h6>
-                </li>
-              <% } %> -->
->>>>>>> 2cca3be40c0276b954f8170efdc996e6ec04471e
             </ul>
             <!-- /.post-list -->
           </div>
