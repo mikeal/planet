@@ -15,7 +15,8 @@
 /*  NAV
 /*-----------------------------------------------------------------------------------*/
 .navbar {
-    font-family: 'Coda', cursive;
+    font-family: 'Open sans';
+    background: #47483d !important;
 }
 .navbar-header {
     background-color: #47483d;
@@ -42,7 +43,7 @@
     background-color: #cecece;
 }
 .nav-list {
-    margin-left: 20px;
+    padding-left: 30px !important;
     font-weight: bold;
 }
 .navbar-toggle {
@@ -66,6 +67,21 @@
 .navbar-brand {
     height: 70px;
     padding: 0px;
+}
+.navbar-default .navbar-nav>li>a{
+    background: #47483d;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+    background: #47483d;
+    opacity: .85;
+    color: white;
+
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    background: #47483d;
 }
 
 /*-----------------------------------------------------------------------------------*/
