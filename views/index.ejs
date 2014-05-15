@@ -60,7 +60,6 @@
   </nav>
   <div class="light-wrapper">
     <div class="container inner">
-      <div class="row">
         <div id="articles" class="col-sm-8 col-md-9 col-lg-10">
           <div class="classic-blog">
           
@@ -73,8 +72,9 @@
                   <div class="meta">
                     <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
                     <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
-                    <span class="author">Author <a href=""></a></span>
-
+                    <% if(data[i].author) { %>
+                    <span class="author">Author: <a><%=data[i].author%></a></span>
+                    <% } %>
                     <div
                       class="addthis_toolbox addthis_default_style addthis_16x16_style"
                       addthis:url="<%=data[i].link%>"
@@ -119,8 +119,6 @@
         </aside>
         <!-- /.col-sm-4 .sidebar -->
 
-      </div>
-      <!-- /.row -->
 
     </div>
   </div>
