@@ -66,32 +66,42 @@
             <% for(var i=0; i<data.length; i++) { %>
               <div class="post well well-lg">
                 <div class="post-content image-caption">
-                  <h2 class="post-title">
-                    <a href="<%= data[i].link %>"><%= data[i].title %></a>
-                  </h2>
-                  <div class="meta">
-                    <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
-                    <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
-                    <% if(data[i].author) { %>
-                    <span class="author">Author: <a><%=data[i].author%></a></span>
-                    <% } %>
-                    <div
-                      class="addthis_toolbox addthis_default_style addthis_16x16_style"
-                      addthis:url="<%=data[i].link%>"
-                      addthis:title="<%=data[i].title%>"
-                    >
-                      <a class="addthis_button_facebook"></a>
-                      <a class="addthis_button_twitter"></a>
-                      <a class="addthis_button_google_plusone_share"></a>
-                      <a class="addthis_button_hackernews"></a>
-                      <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+                  <div class ="quick-look">
+                    <h2 class="post-title">
+                      <a href="<%= data[i].link %>"><%= data[i].title %></a>
+                    </h2>
+                    <div class="meta">
+                      <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
+                      <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
+                      <% if(data[i].author) { %>
+                      <span class="author">Author: <a><%=data[i].author%></a></span>
+                      <% } %>
+                      <div
+                        class="addthis_toolbox addthis_default_style addthis_16x16_style"
+                        addthis:url="<%=data[i].link%>"
+                        addthis:title="<%=data[i].title%>"
+                      >
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_google_plusone_share"></a>
+                        <a class="addthis_button_hackernews"></a>
+                        <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+                      </div>
                     </div>
+                    <!-- /.meta -->
                   </div>
-                  <!-- /.meta -->
 
-                  <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
-                  <div class="post-id" style="display:none"><%=data[i]._id%></div>
-                  <div class="post-description"><%- data[i].content %></div>
+                  <div class="in-depth">
+                    <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
+                    <div class="post-id" style="display:none"><%=data[i]._id%></div>
+                    <div class="post-description"><%- data[i].content %></div>
+                  </div>
+
+                  <div class="show-me-more">
+                    <a class="left">Show Me More 
+                      <span href="" class="glyphicon glyphicon-chevron-right right"></span>
+                    </a>
+                  </div>
                 </div>
                 <!-- /.post-content -->
               </div>
@@ -126,7 +136,7 @@
     <div class="sub-footer">
       <div class="container">
         <p class="pull-left">Built for you by the Node.js Community.</p>
-        <p class="pull-right">Contribute on <a href="https://github.com/madgloryint/planet">Github</a>.</p>
+        <p class="pull-right">- Contribute on <a href="https://github.com/madgloryint/planet">Github</a> -</p>
       </div>
     </div>
   </footer>

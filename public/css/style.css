@@ -309,12 +309,6 @@ blockquote small {
     background: #303030;
     color: #cacaca;
 }
-.footer a {
-    color: #cacaca;
-}
-.footer a:hover {
-    color: #1abb9c;
-}
 .footer h1,
 .footer h2,
 .footer h3,
