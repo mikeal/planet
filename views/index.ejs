@@ -64,7 +64,7 @@
           <div class="classic-blog">
           
             <% for(var i=0; i<data.length; i++) { %>
-              <div class="post well well-lg">
+              <div class="post ">
                 <div class="post-content image-caption">
                   <div class ="quick-look">
                     <h2 class="post-title">
@@ -74,19 +74,11 @@
                       <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
                       <!-- <span class="category">Under <a href="#">Audio</a>, <a href="#">Inspiration</a>, <a href="#">Music</a></span> -->
                       <% if(data[i].author) { %>
+                      
+                      <span class="">Source: <a href="<%= data[i].link %>">link</a></span>                    
                       <span class="author">Author: <a><%=data[i].author%></a></span>
                       <% } %>
-                      <div
-                        class="addthis_toolbox addthis_default_style addthis_16x16_style"
-                        addthis:url="<%=data[i].link%>"
-                        addthis:title="<%=data[i].title%>"
-                      >
-                        <a class="addthis_button_facebook"></a>
-                        <a class="addthis_button_twitter"></a>
-                        <a class="addthis_button_google_plusone_share"></a>
-                        <a class="addthis_button_hackernews"></a>
-                        <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-                      </div>
+                      
                     </div>
                     <!-- /.meta -->
                   </div>
@@ -94,24 +86,28 @@
                   <div class="in-depth hide-me">
                     <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
                     <div class="post-id" style="display:none"><%=data[i]._id%></div>
-                    <div class="post-description"><%- data[i].content %></div>
-                    <hr />
-                    <div class="text-center">
-                      <a href="<%= data[i].link %>">Source</a>
+                    <div class="addthis_toolbox addthis_default_style addthis_16x16_style" addthis:url="<%=data[i].link%>" addthis:title="<%=data[i].title%>">
+                      <a class="addthis_button_facebook"></a>
+                      <a class="addthis_button_twitter"></a>
+                      <a class="addthis_button_google_plusone_share"></a>
+                      <a class="addthis_button_hackernews"></a>
+                      <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
                     </div>
+                    <div class="post-description"><%- data[i].content %></div>                    
                   </div>
 
                 </div>
                 <!-- /.post-content -->
               </div>
               <!-- /.post -->
+              <hr />
             <% } %>
           </div>
           
 
         </div>
         <aside id="sites" class="col-sm-4 col-md-3 col-lg-2 lp30 hidden-xs sidebar">
-          <div class="sidebox widget well">
+          <div class="sidebox widget">
             <h2 class="widget-title">Sites</h2>
             <ul class='post-list'>
                 <% for (var i = 0; i < sitesList.length; i++) {%>
