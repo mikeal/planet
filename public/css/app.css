@@ -55,11 +55,12 @@
     margin-top: 15px;
     background-image: url('/images/planetnodejs-logo.svg');
     background-repeat: no-repeat;
-    padding-left: 85px;
+    padding-left: 105px;
     font-family: 'Open Sans';
     color: white;
-    background-position: right -10px top 4px;
+    background-position: right 20px top 4px;
     font-size: 30px;
+    padding-right: 10px;
 }
 .planet-logo-text{
     float: right;
@@ -118,25 +119,6 @@
     overflow: hidden;
     height: 0px;
 }
-
-.show-me-more{
-    text-align: center;
-    background-color: #E6E6E6;
-    padding: 12px;
-    border-radius: 10px;
-}
- .show-me-more a{
-    margin-bottom: 3px;
-    color: #6ca02e;
-
- }
-
- .show-me-more a:hover{
-    color: #47483d;
- }
- .show-me-more a:visited{
-    color: #6ca02e;
- }
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
@@ -147,6 +129,11 @@
     }
     .footer p{
         margin-top:40px;
+    }
+}
+@media( max-width: 480px){
+    h2.post-title{
+        font-size: 1.25em;
     }
 }
 

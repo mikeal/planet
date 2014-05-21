@@ -243,9 +243,6 @@ ul.circled li:before {
 hr {
     border: none;
     border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 30px;
-    margin-bottom: 2em;
-    margin-top: 5em;
 }
 blockquote {
     border: none;

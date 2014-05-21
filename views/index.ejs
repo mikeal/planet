@@ -68,7 +68,7 @@
                 <div class="post-content image-caption">
                   <div class ="quick-look">
                     <h2 class="post-title">
-                      <a href="<%= data[i].link %>"><%= data[i].title %></a>
+                      <a><%= data[i].title %></a>
                     </h2>
                     <div class="meta">
                       <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
@@ -95,13 +95,12 @@
                     <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
                     <div class="post-id" style="display:none"><%=data[i]._id%></div>
                     <div class="post-description"><%- data[i].content %></div>
+                    <hr />
+                    <div class="text-center">
+                      <a href="<%= data[i].link %>">Source</a>
+                    </div>
                   </div>
 
-                  <div class="show-me-more">
-                    <a class="">Show Me More 
-                      <span href="" class="glyphicon glyphicon-chevron-right right"></span>
-                    </a>
-                  </div>
                 </div>
                 <!-- /.post-content -->
               </div>
@@ -150,7 +149,7 @@
 <script type="text/javascript" src="/js/hide-show-content.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/show-hide-content.js"></script>
+<script type="text/javascript" src="/js/show-more-button.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
