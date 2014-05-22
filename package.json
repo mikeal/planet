@@ -19,7 +19,9 @@
     "feedparser": "*",
     "request": "*",
     "supervisor": "^0.6.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "mongodb": "*",
+    "mongoose": "*"
   },
   "devDependencies": {
     "mocha": "~1.18.2",

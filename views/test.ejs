@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hey</title>
+</head>
+<body>
+<h1>here is the content passed to me:</h1>
+
+<ul>
+
+<% for(var i=0; i<data.length; i++) {%>
+    <li>Date created <%-data[i].displayDate%></li>
+    <li><%-data[i].content %></li>
+    <% console.log(data[i].title); %>
+<% } %>
+</ul>
+
+
+
+
+</body>
+</html>

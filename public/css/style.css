@@ -33,9 +33,6 @@ figure img {
 iframe {
     border: none
 }
-img {
-    width: 100%;
-}
 ::selection {
     background: #fefac7; /* Safari */
     color: #555555;
@@ -57,10 +54,6 @@ body {
     color: #737373;
     font-size: 14px;
     font-weight: 500;
-}
-.container {
-    padding-right: 0;
-    padding-left: 0;
 }
 body,
 li,
@@ -142,7 +135,7 @@ h6 {
 }
 h1.post-title,
 h2.post-title {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 10px;
     line-height: 30px;
 }
@@ -246,9 +239,6 @@ ul.circled li:before {
 hr {
     border: none;
     border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 30px;
-    margin-bottom: 2em;
-    margin-top: 5em;
 }
 blockquote {
     border: none;
@@ -311,12 +301,6 @@ blockquote small {
 .footer {
     background: #303030;
     color: #cacaca;
-}
-.footer a {
-    color: #cacaca;
-}
-.footer a:hover {
-    color: #1abb9c;
 }
 .footer h1,
 .footer h2,

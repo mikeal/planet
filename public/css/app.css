@@ -1,3 +1,4 @@
+
 /*-----------------------------------------------------------------------------------*/
 /*  GLOBAL
 /*-----------------------------------------------------------------------------------*/
@@ -6,14 +7,23 @@
     padding-top: 100px;
 }
 
-.widget h2, .post-content h2{
-    margin-top: 0px;
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
+#articles{
+    background-color: white;
+    margin-top: 100px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  NAV
 /*-----------------------------------------------------------------------------------*/
-
+.navbar {
+    font-family: 'Open sans';
+    background: #47483d !important;
+}
 .navbar-header {
     background-color: #47483d;
 }
@@ -39,7 +49,7 @@
     background-color: #cecece;
 }
 .nav-list {
-    margin-left: 20px;
+    padding-left: 30px !important;
     font-weight: bold;
 }
 .navbar-toggle {
@@ -47,15 +57,38 @@
     margin-top: 17px;
 }
 
-.planet-logo {
-    width: 300px;
-    margin-top: 19px;
-    padding-left: 30px;
+.logo {
+    margin-top: 15px;
+    background-image: url('/images/planetnodejs-logo.svg');
+    background-repeat: no-repeat;
+    padding-left: 105px;
+    font-family: 'Open Sans';
+    color: white;
+    background-position: right 20px top 4px;
+    font-size: 30px;
+    padding-right: 10px;
 }
-
+.planet-logo-text{
+    float: right;
+}
 .navbar-brand {
     height: 70px;
     padding: 0px;
+}
+.navbar-default .navbar-nav>li>a{
+    background: #47483d;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+    background: #47483d;
+    opacity: .85;
+    color: white;
+
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    background: #47483d;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -67,12 +100,6 @@
     color: #cacaca;
     text-align: center;
 }
-.footer a {
-    color: #cacaca
-}
-.footer a:hover {
-    color: #1abb9c
-}
 .footer h1,
 .footer h2,
 .footer h3,
@@ -82,26 +109,36 @@
     color: #f0f0f0
 }
 
-.sub-footer .container .pull-right{
+.sub-footer .footer-container .pull-right{
     text-align: center !important;
     float: none !important;
 }
-.sub-footer .container .pull-left{
+.sub-footer .footer-container .pull-left{
     text-align: center !important;
     float: none !important;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  Content
+/*-----------------------------------------------------------------------------------*/
+.in-depth.hide-me{
+    overflow: hidden;
+    height: 0px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
 
 @media( min-width: 769px){
-    .footer{
-        height: 100px;
-    }
-    .footer p{
-        margin-top:40px;
+
+}
+@media( max-width: 480px){
+    h2.post-title{
+        font-size: 1.25em;
     }
 }
-
-
+@media( max-width: 768px){
+    #sites{
+        text-align: center;
+    }
+}

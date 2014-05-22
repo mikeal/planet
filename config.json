@@ -60,11 +60,6 @@
       "author": "Nick Campbell",
       "link": "http://digitaltumbleweed.com"
     },
-    "Bogo's Blog": {
-      "feed": "http://talkweb.eu/c/nodejs/feed",
-      "author": "Bogomil Shopov",
-      "link": "http://talkweb.eu/"
-    },
     "Ryah Dahl's Blog": {
       "feed": "http://antirobotrobot.tumblr.com/rss",
       "author": "Ryan Dahl",
@@ -165,12 +160,5 @@
       "author": "Francois Marier",
       "link": "http://feeding.cloud.geek.nz/"
     }
-  },
-  "title": "Planet Node.js",
-  "tags": [ "node","nodejs","planet","javascript","developer","node.js","community" ],
-  "url": "http://www.planetnodejs.com",
-  "image": "http://nodejs.org/logo.png",
-  "description": "Community blog aggregator for node.js",
-  "editorEmail": "mikeal.rogers@gmail.com",
-  "css": "./site.css"
+  }
 }
