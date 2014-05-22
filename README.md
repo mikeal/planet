@@ -11,10 +11,12 @@ __1. Install Dependencies__
     npm install
 
 __2. Start the database dameon__
+
     cd planet
     mongod --dbpath data
 
 __1. Start the databse *IN NEW TAB*__
+
     mongo
 
 __2. Run the server *IN ANOTHER NEW TAB*__
