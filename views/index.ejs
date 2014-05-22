@@ -16,7 +16,7 @@
 
 
   <!-- Latest compiled and minified CSS -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/app.css">
@@ -68,11 +68,12 @@
               <div class ="quick-look">
                 <h2 class="post-title"><a><%= data[i].title %></a></h2>
                 <div class="meta">
-                  <span class="date">Posted on <a href="#"><%=data[i].displayDate%></a></span>
-                  <% if(data[i].author) { %>                    
-                    <span class="">Source: <a href="<%= data[i].link %>">link</a></span>                    
-                    <span class="author">Author: <a><%=data[i].author%></a></span>
-                  <% } %>
+                  <span class="date">Posted on <h5 href="#"><%=data[i].displayDate%></h5></span>
+                  <% if(data[i].author) { %>                   
+                    <span class="author">Author: <h5><%=data[i].author%></h5></span>
+                  <% } %>                  
+                  <span class="">Source: <a href="<%= data[i].link %>">link</a></span>
+                  
                   
                 </div>
               </div>
@@ -90,7 +91,8 @@
                     <a class="addthis_button_google_plusone_share"></a>
                     <a class="addthis_button_hackernews"></a>
                     <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-                  </div>
+                </div>
+                <br/>
                 <div class="post-description"><%- data[i].content %></div>                    
               </div>              
             </div>
