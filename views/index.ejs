@@ -68,7 +68,7 @@
               <div class ="quick-look">
                 <h2 class="post-title"><a><%= data[i].title %></a></h2>
                 <div class="meta">
-                  <span class="date">Posted on <h5 href="#"><%=data[i].displayDate%></h5></span>
+                  <span class="date">Posted on <h5 class="displayDate"><%=data[i].displayDate%></h5></span>
                   <% if(data[i].author) { %>                   
                     <span class="author">Author: <h5><%=data[i].author%></h5></span>
                   <% } %>                  
@@ -79,7 +79,6 @@
               </div>
 
               <div class="in-depth hide">
-                <div class="post-isoTimestamp" style="display:none"><%=data[i].isoTimestamp%></div>
                 <div class="post-id" style="display:none"><%=data[i]._id%></div>
                 <div
                     class="addthis_toolbox addthis_default_style addthis_16x16_style"
@@ -153,7 +152,9 @@
     };
   </script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7768413d24ce9"></script>
+  <script type="text/javascript" src="/js/xdate.js"></script>
   <script type="text/javascript" src="/js/menu-bar-options.js"></script>
   <script type="text/javascript" src="/js/article-title-click.js"></script>
+  <script type="text/javascript" src="/js/format-dates.js"></script>
 </body>
 </html>
