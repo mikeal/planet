@@ -10,18 +10,17 @@ __1. Install Dependencies__
 
     npm install
 
+__2. Start the database dameon__
+    cd planet
+    mongod --dbpath data
 
-__2. Run the server__
+__1. Start the databse *IN NEW TAB*__
+    mongo
+
+__2. Run the server *IN ANOTHER NEW TAB*__
 
     npm start
 
-***An alternative to this command would be 'node main.js' , however they both accomplish the same thing.***
-
-__3. Run the tests__
-
-    npm test
-
-*Like falling off a log.
 
 Enjoy!
 -- [MadGlory](http://madglory.com)
