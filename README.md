@@ -13,6 +13,7 @@ __1. Install Dependencies__
 __2. Start the database dameon__
 
     cd planet
+    mkdir data
     mongod --dbpath data
 
 __1. Start the databse *IN NEW TAB*__
