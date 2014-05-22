@@ -55,10 +55,6 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
-.container {
-    padding-right: 0;
-    padding-left: 0;
-}
 body,
 li,
 address {
@@ -139,7 +135,7 @@ h6 {
 }
 h1.post-title,
 h2.post-title {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 10px;
     line-height: 30px;
 }

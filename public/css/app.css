@@ -7,10 +7,16 @@
     padding-top: 100px;
 }
 
-.widget h2, .post-content h2{
-    margin-top: 0px;
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
+#articles{
+    background-color: white;
+    margin-top: 100px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  NAV
 /*-----------------------------------------------------------------------------------*/
@@ -103,11 +109,11 @@
     color: #f0f0f0
 }
 
-.sub-footer .container .pull-right{
+.sub-footer .footer-container .pull-right{
     text-align: center !important;
     float: none !important;
 }
-.sub-footer .container .pull-left{
+.sub-footer .footer-container .pull-left{
     text-align: center !important;
     float: none !important;
 }
@@ -124,17 +130,15 @@
 /*-----------------------------------------------------------------------------------*/
 
 @media( min-width: 769px){
-    .footer{
-        height: 100px;
-    }
-    .footer p{
-        margin-top:40px;
-    }
+
 }
 @media( max-width: 480px){
     h2.post-title{
         font-size: 1.25em;
     }
 }
-
-
+@media( max-width: 768px){
+    #sites{
+        text-align: center;
+    }
+}
