@@ -62,27 +62,26 @@
       <div id="articles" class="column col-sm-8 col-md-8 col-lg-8">
 
         <div class="classic-blog">
-          <% for(var i=0; i<data.length; i++) { %>
             <div class="post ">              
               <div class ="quick-look">
-                <h2 class="post-title" href="?id=<%=data[i]._id%>"><a href="?id=<%=data[i]._id%>"><%= data[i].title %></a></h2>
+                <h2 class="post-title" href="?id=<%=data[0]._id%>"><%= data[0].title %></h2>
                 <div class="meta">
-                  <div class="post-id" style="display:none"><%=data[i]._id%></div>
-                  <span class="date">Posted on <h5 class="displayDate"><%=data[i].displayDate%></h5></span>
-                  <% if(data[i].author) { %>                   
-                    <span class="author">Author: <h5><%=data[i].author%></h5></span>
+                  <div class="post-id" style="display:none"><%=data[0]._id%></div>
+                  <span class="date">Posted on <h5 class="displayDate"><%=data[0].displayDate%></h5></span>
+                  <% if(data[0].author) { %>                   
+                    <span class="author">Author: <h5><%=data[0].author%></h5></span>
                   <% } %>                  
-                  <span class="">Source: <a href="<%= data[i].link %>">link</a></span>
+                  <span class="">Source: <a href="<%= data[0].link %>">link</a></span>
                   
                   
                 </div>
               </div>
 
-              <div class="in-depth hide">
+              <div class="in-depth">
                 <div
                     class="addthis_toolbox addthis_default_style addthis_16x16_style"
-                    addthis:url="<%=data[i].link%>"
-                    addthis:title="<%=data[i].title%>"
+                    addthis:url="<%=data[0].link%>"
+                    addthis:title="<%=data[0].title%>"
                   >
                     <a class="addthis_button_facebook"></a>
                     <a class="addthis_button_twitter"></a>
@@ -91,14 +90,9 @@
                     <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
                 </div>
                 <br/>
-                <div class="post-description"><%- data[i].content %></div>                    
+                <div class="post-description"><%- data[0].content %></div>                    
               </div>              
             </div>
-            
-            <% if(i != data.length-1 ) {%> <!--This is to prevent an hr tag at the bottom of page-->
-              <hr />
-            <% } %>
-          <% } %>
         </div>
         
 
@@ -137,6 +131,7 @@
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7768413d24ce9"></script>
   <script type="text/javascript" src="/js/xdate.js"></script>
   <script type="text/javascript" src="/js/menu-bar-options.js"></script>
+  <script type="text/javascript" src="/js/article-title-click.js"></script>
   <script type="text/javascript" src="/js/format-dates.js"></script>
 </body>
 </html>

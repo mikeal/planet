@@ -1,9 +1,11 @@
 $('.post-title').click(function() {
-    for (var i = 0; i < $('.post-title').length; i++) {
-        if( $(this) != $('.post-title')[i]){
-            $('.post-title')[i].addClass('hide');
-        }
-    };
+    // var postTitles = $('.post-title');
+    // console.log(postTitles[0]);
+    // for (var i = 0; i < $(postTitles[i]).length; i++) {
+    //     if( $(this) != $(postTitles[i])){
+    //         $(postTitles[i]).closest('.post').find('.in-depth').addClass('hide');
+    //     }
+    // };
     var content = $(this).closest('.post').find('.in-depth');
     if($(content).hasClass('hide')){
         $(content).removeClass('hide');
@@ -11,7 +13,6 @@ $('.post-title').click(function() {
     else if( !$(content).hasClass('hide')){
         $(content).addClass('hide');
     }
-
 });
 
 
