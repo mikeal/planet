@@ -63,36 +63,23 @@
 
         <div class="classic-blog">
           <% for(var i=0; i<data.length; i++) { %>
-            <div class="post ">              
+            <div class="post">              
               <div class ="quick-look">
+
                 <h2 class="post-title" href="?id=<%=data[i]._id%>"><a href="?id=<%=data[i]._id%>"><%= data[i].title %></a></h2>
+
                 <div class="meta">
                   <div class="post-id" style="display:none"><%=data[i]._id%></div>
                   <span class="date">Posted on <h5 class="displayDate"><%=data[i].displayDate%></h5></span>
                   <% if(data[i].author) { %>                   
                     <span class="author">Author: <h5><%=data[i].author%></h5></span>
                   <% } %>                  
-                  <span class="">Source: <a href="<%= data[i].link %>">link</a></span>
-                  
-                  
+                  <span class="">
+                    Source: <link rel="canonical" href="<%= data[i].link %>" />
+                  </span>                  
                 </div>
-              </div>
 
-              <div class="in-depth hide">
-                <div
-                    class="addthis_toolbox addthis_default_style addthis_16x16_style"
-                    addthis:url="<%=data[i].link%>"
-                    addthis:title="<%=data[i].title%>"
-                  >
-                    <a class="addthis_button_facebook"></a>
-                    <a class="addthis_button_twitter"></a>
-                    <a class="addthis_button_google_plusone_share"></a>
-                    <a class="addthis_button_hackernews"></a>
-                    <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-                </div>
-                <br/>
-                <div class="post-description"><%- data[i].content %></div>                    
-              </div>              
+              </div>             
             </div>
             
             <% if(i != data.length-1 ) {%> <!--This is to prevent an hr tag at the bottom of page-->
