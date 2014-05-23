@@ -30,11 +30,6 @@
       "author": "Joyent",
       "link": "http://blog.nodejs.org/"
     },
-    "3rd-Eden": {
-      "feed": "http://feeds.feedburner.com/3rd-eden",
-      "author": "Arnout Kazemier",
-      "link": "http://blog.3rd-eden.com/"
-    },
     "polotek": {
       "feed": "http://marcorogers.com/blog/rss",
       "author": "Marco Rogers",
@@ -59,11 +54,6 @@
       "feed": "http://digitaltumbleweed.com/rss.xml",
       "author": "Nick Campbell",
       "link": "http://digitaltumbleweed.com"
-    },
-    "Ryah Dahl's Blog": {
-      "feed": "http://antirobotrobot.tumblr.com/rss",
-      "author": "Ryan Dahl",
-      "link": "http://antirobotrobot.tumblr.com"
     },
     "Metaduck": {
       "feed": "http://metaduck.com/tagged/node.js/rss",
@@ -94,11 +84,6 @@
       "feed": "http://feeds.feedburner.com/NodeUp",
       "author": "Node Up",
       "link": "http://nodeup.com/"
-    },
-    "Nuno's Notebook": {
-      "feed": "http://feeds.feedburner.com/nunojob",
-      "author": "Nuno Job",
-      "link": "http://writings.nunojob.com/"
     },
     "Shape Shed": {
       "feed": "http://feeds.shapeshed.com/shapeshed",

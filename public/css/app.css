@@ -58,15 +58,14 @@ hr{
 }
 
 .logo {
+    font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
     background-image: url('/images/planetnodejs-logo.svg');
     background-repeat: no-repeat;
     padding-left: 105px;
-    font-family: 'Open Sans';
     color: white;
-    background-position: right 20px top 4px;
-    font-size: 30px;
-    padding-right: 10px;
+    background-position: right 0px top 4px;
+    font-weight: 300;
 }
 .planet-logo-text{
     float: right;
@@ -119,11 +118,25 @@ hr{
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Content
+/*  Quick Look
+/*-----------------------------------------------------------------------------------*/
+
+.quick-look .meta span h5{
+    display: inline-block;
+    font-size: 14px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  In-depth
 /*-----------------------------------------------------------------------------------*/
 .in-depth.hide-me{
     overflow: hidden;
     height: 0px;
+}
+.post-description{
+    margin: 0 0 15px;
+    font-size: 1.4em;
+    line-height: 1.5em;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA QUERIES
