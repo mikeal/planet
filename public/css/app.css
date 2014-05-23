@@ -58,13 +58,13 @@ hr{
 }
 
 .logo {
-   font-family: 'Open Sans', sans-serif;
-   margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
     background-image: url('/images/planetnodejs-logo.svg');
     background-repeat: no-repeat;
     padding-left: 105px;
     color: white;
-    background-position: right 40px top 4px;
+    background-position: right 0px top 4px;
     font-weight: 300;
 }
 .planet-logo-text{
