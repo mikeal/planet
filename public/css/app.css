@@ -149,6 +149,19 @@ hr{
     h2.post-title{
         font-size: 1.25em;
     }
+    .logo{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 15px;
+        background-image: url('/images/planetnodejs-logo.svg');
+        background-repeat: no-repeat;
+        padding-left: 80px;
+        color: white;
+        background-position: right -5px top 4px;
+        font-weight: 300;
+    }
+    .logo h1{
+        font-size: 30px;
+    }
 }
 @media( max-width: 768px){
     #sites{

@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button> -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             
             <h1 class='logo'>Planet Node.js</h1>
           </a>
@@ -74,8 +74,8 @@
                   <% if(data[i].author) { %>                   
                     <span class="author">Author: <h5><%=data[i].author%></h5></span>
                   <% } %>                  
-                  <span class="">
-                    Source: <link rel="canonical" href="<%= data[i].link %>" />
+                  <span class="">Source: <a href="<%= data[i].link %>">link</a>
+
                   </span>                  
                 </div>
 
