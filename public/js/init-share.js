@@ -1,0 +1,1 @@
+new Share('.share-button');

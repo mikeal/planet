@@ -69,9 +69,9 @@
                   <div class="post-id" style="display:none"><%=data[0]._id%></div>
                   <span class="date">Posted on <h5 class="displayDate"><%=data[0].displayDate%></h5></span>
                   <% if(data[0].author) { %>                   
-                    <span class="author">Author: <h5><%=data[0].author%></h5></span>
+                    <span class="author">| Author: <h5><%=data[0].author%></h5></span>
                   <% } %>                  
-                  <span class="">Source: <a href="<%= data[0].link %>">link</a></span>
+                  <span class="">| Source: <a href="<%= data[0].link %>">link</a></span>
                   
                   
                 </div>
@@ -86,7 +86,6 @@
                     <a class="addthis_button_facebook"></a>
                     <a class="addthis_button_twitter"></a>
                     <a class="addthis_button_google_plusone_share"></a>
-                    <a class="addthis_button_hackernews"></a>
                     <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
                 </div>
                 <br/>
@@ -128,6 +127,7 @@
       data_ga_social        : true
     };
   </script>
+  <script type="text/javascript" src="/js/share.min.js"></script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7768413d24ce9"></script>
   <script type="text/javascript" src="/js/xdate.js"></script>
   <script type="text/javascript" src="/js/format-dates.js"></script>

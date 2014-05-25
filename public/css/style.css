@@ -1408,12 +1408,9 @@ input:focus:-ms-input-placeholder {
 .content .grid-blog hr:nth-child(4n) {
     display: block
 }
-.classic-blog .meta {
-    margin-bottom: 10px
-}
-.classic-blog .meta span:before {
-    display: inline-block;
-    content: "|";
+
+.classic-blog .meta span.divider:before {
+    display: block;
     padding: 0 7px 0 4px;
     color: #9f9f9f;
 }
