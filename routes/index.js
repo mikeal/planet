@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
       var article = [];
       article[0] = post;
       res.render(
-        'singleArticle', {data: article}
+        'singleArticle', {data: article, uri: 'http://www.planetnodejs.com/article/'+post.title}
       );
     });
   }
@@ -20,14 +20,14 @@ router.get('/', function(req, res) {
     feedreader.getArticlesBySearchString(req.query.searchString, function(results){
       
       res.render(
-        'search', {data: results}
+        'search', {data: results, uri: 'http://www.planetnodejs.com/search/' + req.query.searchString}
       );
     });
   }
   else {
     feedreader.run(function(posts) {    
       res.render(
-        'index', {data: posts}
+        'index', {data: posts, uri: 'http://www.planetnodejs.com'}
       );
         
     });
