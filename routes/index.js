@@ -18,8 +18,7 @@ router.get('/', function(req, res) {
   else if(req.query.searchString){
     console.log(('Here is the users search: ' + req.query.searchString));
     feedreader.getArticlesBySearchString(req.query.searchString, function(results){
-      console.log(results.hits.hits.length);
-      console.log(results.hits.hits[0]._source.title);
+      
       res.render(
         'search', {data: results}
       );
