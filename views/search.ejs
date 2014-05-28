@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include head.ejs %>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="row">
+      <div class="column col-sm-2"></div>
+      <div id="articles" class="column col-sm-8 col-md-8 col-lg-8">
+      <%- include navbar.ejs %>
+        <div class="classic-blog">
+          <% for(var i=0; i<data.hits.hits.length; i++) { %>
+            <div class="post">              
+              <div class ="quick-look">
+
+                <h2 class="post-title" href="?id=<%=data.hits.hits[i]._source._id%>"><a href="?id=<%=data.hits.hits[i]._source._id%>"><%= data.hits.hits[i]._source.title %></a></h2>
+
+                <div class="meta">
+                  <div class="post-id" style="display:none"><%=data.hits.hits[i]._source._id%></div>
+                  <span class="date">Posted on <h5 class="displayDate"><%=data.hits.hits[i]._source.displayDate%></h5></span>
+                  <% if(data.hits.hits[i]._source.author) { %>                   
+                    <span class="author">| Author: <h5><%=data.hits.hits[i]._source.author%></h5></span>
+                  <% } %>                  
+                  <span class="">| Source: <a href="<%= data.hits.hits[i]._source.link %>">link</a>
+
+                  </span>                  
+                </div>
+
+              </div>             
+            </div>
+            
+            <% if(i != data.hits.hits.length-1 ) {%> <!--This is to prevent an hr tag at the bottom of page-->
+              <hr />
+            <% } %>
+          <% } %>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="sub-footer">
+      <div class="footer-container">
+        <p class="pull-left">Built for you by the Node.js Community.</p>
+        <p class="pull-right">- Contribute on <a href="https://github.com/madgloryint/planet">Github</a> -</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33396402-5', 'planetnodejs.com');
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">
+    var addthis_config = {
+      data_track_addressbar : true,
+      data_ga_property      : 'UA-33396402-5',
+      data_ga_social        : true
+    };
+  </script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7768413d24ce9"></script>
+  <script type="text/javascript" src="/js/xdate.js"></script>
+  <script type="text/javascript" src="/js/format-dates.js"></script>
+</body>
+</html>
