@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" style='height: calc( 100% - 158px)'>
+<html lang="en">
 <head>
 <%- include head.ejs %>
+<link rel="canonical" href="<%=uri%>" />
 </head>
-<body style='height: calc( 100% )'>
-  <div class="container" style='height: calc( 100% )'>
+<body>
+  <div class="container">
     
-    <div class="row" >
-      <div class="column col-sm-2" style='height: calc( 100% )'></div>
-      <div id="articles" class="column col-sm-8 col-md-8 col-lg-8" style='height: calc( 100% )'>
+    <div class="row">
+      <div class="column col-sm-2"></div>
+      <div id="articles" class="column col-sm-8 col-md-8 col-lg-8">
       <%- include navbar.ejs %>
-      <div class="column col-lg-12 centered" style="">
-        <h1 class="text-center">Well ... this is unfortunate</h1>
-        <p style="font-size:20px">It looks like the webpage you requested either does not exist, or we had an error retreiving it. Please scan over your link to make sure it is correct, or reload the page in a few seconds</p>
-      </div>
+        <div class="classic-blog">
+          <% for(var i=0; i<data.hits.hits.length; i++) { %>
+            <div class="post">              
+              <div class ="quick-look">
+
+                <h2 class="post-title" href="?id=<%=data.hits.hits[i]._id%>"><a href="?id=<%=data.hits.hits[i]._id%>"><%= data.hits.hits[i]._source.title %></a></h2>
+
+                <div class="meta">
+                  <div class="post-id" style="display:none"><%=data.hits.hits[i]._source._id%></div>
+                  <span class="date">Posted on <h5 class="displayDate"><%=data.hits.hits[i]._source.displayDate%></h5></span>
+                  <% if(data.hits.hits[i]._source.author) { %>                   
+                    <span class="author">| Author: <h5><%=data.hits.hits[i]._source.author%></h5></span>
+                  <% } %>                  
+                  <span class="">| Source: <a href="<%= data.hits.hits[i]._source.link %>">link</a>
+
+                  </span>                  
+                </div>
+
+              </div>             
+            </div>
+            
+            <% if(i != data.hits.hits.length-1 ) {%> <!--This is to prevent an hr tag at the bottom of page-->
+              <hr />
+            <% } %>
+          <% } %>
+        </div>
         
 
       </div>
     </div>
-    <ul class="pagination">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
   </div>
 
   <footer class="footer">

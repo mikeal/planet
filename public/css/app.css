@@ -37,24 +37,18 @@ hr{
     border-color: #8fc84c;
     background: none;
 }
-.navbar-nav {
-    background-color: #cecece;
-}
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #8fc84c;
 }
 
-.navbar-collapse {
-    background-color: #cecece;
-}
 .nav-list {
     padding-left: 30px !important;
     font-weight: bold;
 }
 .navbar-toggle {
     margin-right: 25px;
-    margin-top: 17px;
+    margin-top: 19px;
 }
 
 .logo {
@@ -90,6 +84,30 @@ hr{
     background: #47483d;
 }
 
+.navbar-form{
+    margin-bottom: 0 !important;
+    margin-top: 0px !important;
+    border: none;
+    padding-top: 15px;
+}
+.navbar form input, .navbar form .btn{
+    margin-bottom: .5px !important;
+    height: 40px;
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+}
+.form-group{
+    width: 65%;
+    display: inline-block;
+}
+.navbar-default .navbar-collapse {
+    border: none;
+}
+
+.navbar form .btn {
+    margin-right: 12px !important;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  FOOTER
 /*-----------------------------------------------------------------------------------*/
@@ -126,16 +144,20 @@ hr{
     font-size: 14px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  In-depth
 /*-----------------------------------------------------------------------------------*/
+.in-depth{
+    padding-top: 10px;
+}
 .in-depth.hide-me{
     overflow: hidden;
     height: 0px;
 }
 .post-description{
     margin: 0 0 15px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.5em;
 }
 /*-----------------------------------------------------------------------------------*/
@@ -149,9 +171,38 @@ hr{
     h2.post-title{
         font-size: 1.25em;
     }
+    .logo{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 15px;
+        background-image: url('/images/planetnodejs-logo.svg');
+        background-repeat: no-repeat;
+        padding-left: 80px;
+        color: white;
+        background-position: right -18px top 7px;
+        font-weight: 300;
+        font-size: 1.4em;
+    }
+    .logo h1{
+        font-size: 30px;
+    }
+
+    .form-group{
+        width: 65%;
+        display: inline-block;
+    }
+    .navbar-default .navbar-collapse {
+        border: none;
+    }
+
+    .navbar form .btn {
+        margin-right: 0px !important;
+    }
+
+    .navbar-form{
+        margin-bottom: 0 !important;
+        margin-top: 0px !important;
+    }
 }
 @media( max-width: 768px){
-    #sites{
-        text-align: center;
-    }
+
 }
