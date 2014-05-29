@@ -1482,9 +1482,6 @@ input:focus:-ms-input-placeholder {
 /*-----------------------------------------------------------------------------------*/
 /*	PAGINATION
 /*-----------------------------------------------------------------------------------*/
-.pagination {
-    display: block
-}
 .pagination ul {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
