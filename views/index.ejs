@@ -49,13 +49,14 @@
       <div class="col-lg-12 text-center">
             
         <ul class="pagination">
-          <li><a href="?page=forward">&laquo;</a></li>
-          <li><a href="?page=1">1</a></li>
-          <li><a href="?page=2">2</a></li>
-          <li><a href="?page=3">3</a></li>
-          <li><a href="?page=4">4</a></li>
-          <li><a href="?page=5">5</a></li>
-          <li><a href="?page=back">&raquo;</a></li>
+          <% if (page == 1) { %>
+            <li class="disabled"><a>&laquo;</a></li>
+          <%} else{ %>
+            <li><a href="?page=<%=page-1%>">&laquo;</a></li>
+          <%} %>
+          
+          <li><a href="?page=<%=page%>"><%=page%></a></li>
+          <li><a href="?page=<%=parseInt(page) + 1%>">&raquo;</a></li>
         </ul>
       </div>
     </div>
@@ -93,8 +94,5 @@
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7768413d24ce9"></script>
   <script type="text/javascript" src="/js/xdate.js"></script>
   <script type="text/javascript" src="/js/format-dates.js"></script>
-  <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/jQuery.headroom.min.js"></script>
-  <script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

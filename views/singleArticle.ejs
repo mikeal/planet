@@ -19,7 +19,12 @@
                   <div class="post-id" style="display:none"><%=data[0]._id%></div>
                   <span class="date">Posted on <h5 class="displayDate"><%=data[0].displayDate%></h5></span>
                   <% if(data[0].author) { %>                   
-                    <span class="author">| Author: <h5><%=data[0].author%></h5></span>
+                    <span class="author">
+                      | Author: 
+                      <a href="?searchString=<%=data[0].author%>">
+                        <%=data[0].author%>
+                      </a>
+                    </span>
                   <% } %>                  
                   <span class="">| Source: <a href="<%= data[0].link %>">link</a></span>
                   
