@@ -1,0 +1,222 @@
+
+/*-----------------------------------------------------------------------------------*/
+/*  GLOBAL
+/*-----------------------------------------------------------------------------------*/
+
+.light-wrapper{
+    padding-top: 100px;
+}
+
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#articles{
+    background-color: white;
+    margin-top: 100px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  NAV
+/*-----------------------------------------------------------------------------------*/
+.navbar {
+    font-family: 'Open sans';
+    background: #47483d !important;
+    transition: all .2s ease-in-out;
+}
+.navbar-header {
+    background-color: #47483d;
+}
+.navbar-default {
+    background-color: #47483d;
+}
+.navbar-default .navbar-toggle {
+    border-color: #47483d;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    border-color: #8fc84c;
+    background: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #8fc84c;
+}
+
+.nav-list {
+    padding-left: 30px !important;
+    font-weight: bold;
+}
+.navbar-toggle {
+    margin-right: 25px;
+    margin-top: 19px;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    background-image: url('/images/planetnodejs-logo.svg');
+    background-repeat: no-repeat;
+    padding-left: 105px;
+    color: white;
+    background-position: right 0px top 4px;
+    font-weight: 300;
+}
+.planet-logo-text{
+    float: right;
+}
+.navbar-brand {
+    height: 70px;
+    padding: 0px;
+}
+.navbar-default .navbar-nav>li>a{
+    background: #47483d;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+    background: #47483d;
+    opacity: .85;
+    color: white;
+
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    background: #47483d;
+}
+
+.navbar-form{
+    margin-bottom: 0 !important;
+    margin-top: 0px !important;
+    border: none;
+    padding-top: 15px;
+}
+.navbar form input, .navbar form .btn{
+    margin-bottom: .5px !important;
+    height: 40px;
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+}
+.form-group{
+    width: 65%;
+    display: inline-block;
+}
+.navbar-default .navbar-collapse {
+    border: none;
+}
+
+.navbar form .btn {
+    margin-right: 12px !important;
+}
+
+
+nav.slideUp{
+    top: -70px !important;
+}
+
+nav.slideDown{
+    top: 0px !important;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  FOOTER
+/*-----------------------------------------------------------------------------------*/
+
+.footer {
+    background: #303030;
+    color: #cacaca;
+    text-align: center;
+}
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+    color: #f0f0f0
+}
+
+.sub-footer .footer-container .pull-right{
+    text-align: center !important;
+    float: none !important;
+}
+.sub-footer .footer-container .pull-left{
+    text-align: center !important;
+    float: none !important;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #555555 !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Quick Look
+/*-----------------------------------------------------------------------------------*/
+
+.quick-look .meta span h5{
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  In-depth
+/*-----------------------------------------------------------------------------------*/
+.in-depth{
+    padding-top: 10px;
+}
+.in-depth.hide-me{
+    overflow: hidden;
+    height: 0px;
+}
+.post-description{
+    margin: 0 0 15px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  MEDIA QUERIES
+/*-----------------------------------------------------------------------------------*/
+
+@media( min-width: 769px){
+
+}
+@media( max-width: 480px){
+    h2.post-title{
+        font-size: 1.25em;
+    }
+    .logo{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 15px;
+        background-image: url('/images/planetnodejs-logo.svg');
+        background-repeat: no-repeat;
+        padding-left: 80px;
+        color: white;
+        background-position: right -18px top 7px;
+        font-weight: 300;
+        font-size: 1.4em;
+    }
+    .logo h1{
+        font-size: 30px;
+    }
+
+    .form-group{
+        width: 65%;
+        display: inline-block;
+    }
+    .navbar-default .navbar-collapse {
+        border: none;
+    }
+
+    .navbar form .btn {
+        margin-right: 0px !important;
+    }
+
+    .navbar-form{
+        margin-bottom: 0 !important;
+        margin-top: 0px !important;
+    }
+}
+@media( max-width: 768px){
+
+}

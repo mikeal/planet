@@ -1,0 +1,174 @@
+.spinner,
+.tp-loader,
+#fancybox-loading div {
+    border-left: 3px solid rgba(230, 126, 34,.15) !important;
+    border-right: 3px solid rgba(230, 126, 34,.15) !important;
+    border-bottom: 3px solid rgba(230, 126, 34,.15) !important;
+    border-top: 3px solid rgba(230, 126, 34,.8) !important;
+}
+a {
+    color: #ee7757;
+}
+.colored {
+    color: #ee7757
+}
+.post-title a:hover {
+    color: #ee7757
+}
+ul.circled li:before {
+    color: #ee7757;
+}
+.lead.lite a {
+    border-bottom: 1px solid #ee7757;
+}
+.lead.lite a:hover {
+    color: #ee7757
+}
+.footer a:hover {
+    color: #ee7757
+}
+.nav > li > a:hover {
+    color: #ee7757;
+}
+.nav > li.current > a {
+    color: #ee7757;
+}
+.navbar .nav .open > a,
+.navbar .nav .open > a:hover,
+.navbar .nav .open > a:focus {
+    color: #ee7757;
+}
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-submenu:hover > a,
+.navbar .dropdown-submenu:focus > a,
+.navbar .dropdown-menu > .active > a,
+.navbar .dropdown-menu > .active > a:hover,
+.navbar .dropdown-menu > .active > a:focus {
+    color: #ee7757;
+}
+.btn,
+.parallax .btn-submit,
+.btn-submit {
+    background: #ee7757;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.parallax .btn-submit:hover {
+    background: #d96c4f;
+}
+.newsletter-wrapper #mc_embed_signup .button {
+    background: #ee7757;
+}
+.filter li a:hover {
+    color: #ee7757
+}
+.filter li a.active {
+    color: #ee7757;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	TOOLTIP
+/*-----------------------------------------------------------------------------------*/
+.tooltip-inner {
+    background-color: #ee7757;
+}
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+    border-top-color: #ee7757
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #ee7757
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #ee7757
+}
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bottom-left .tooltip-arrow,
+.tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #ee7757
+}
+.services-1 .col-wrapper:hover,
+.services-1 .col-wrapper:hover:before {
+    border-color: #ee7757
+}
+.services-3 .icon i.icn {
+    color: #ee7757;
+    border: 2px solid #ee7757;
+}
+.services-3 .col:hover i.icn {
+    background-color: #ee7757;
+}
+.panel-title > a:hover {
+    color: #ee7757
+}
+.progress-list li em {
+    color: #ee7757;
+}
+.progress.plain {
+    border: 1px solid #ee7757;
+}
+.progress.plain .bar {
+    background: #ee7757;
+}
+.meta.tags a:hover {
+    color: #ee7757
+}
+.owl-carousel .owl-controls .owl-prev:hover,
+.owl-carousel .owl-controls .owl-next:hover {
+    border: 1px solid #ee7757;
+    color: #ee7757;
+}
+.navigation a:hover {
+    border: 1px solid #ee7757;
+    color: #ee7757;
+}
+.tp-caption a {
+    color: #ee7757
+}
+#testimonials .author {
+    color: #ee7757;
+}
+.tabs-top .tab a:hover,
+.tabs-top .tab.active a {
+    color: #ee7757
+}
+.parallax a:hover {
+    color: #ee7757
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    border: 1px solid #ee7757;
+    color: #ee7757;
+}
+.sidebox a:hover {
+    color: #ee7757
+}
+#comments .info h2 a:hover {
+    color: #ee7757
+}
+#comments a.reply-link:hover {
+    color: #ee7757
+}
+.pricing .plan h4 span {
+    color: #ee7757
+}
+.bonfire-slideout-button:hover {
+	color: #ee7757;
+}
+.bonfire-slideout-close:hover {
+	color: #ee7757;
+}
+.bonfire-slideout-content .btn-submit {
+    background: #ee7757
+}
+@media (max-width: 991px) { 
+	.navbar-nav > li > a,
+	.navbar-nav > li > a:focus {
+	    color: #ee7757
+	}
+}
