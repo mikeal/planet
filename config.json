@@ -144,6 +144,11 @@
       "feed": "http://feeding.cloud.geek.nz/feeds/posts/default/-/nodejs",
       "author": "Francois Marier",
       "link": "http://feeding.cloud.geek.nz/"
+    },
+    "McNally Developers Dev Center": {
+      "feed": "http://blog.mcnallydevelopers.com/tag/node-js/rss/",
+      "author": "Paulo McNally",
+      "link": "http://blog.mcnallydevelopers.com/"
     }
   }
 }
