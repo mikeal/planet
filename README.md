@@ -1,6 +1,8 @@
 Planet Node
 ===========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mikeal/planet.svg)](https://greenkeeper.io/)
+
 This is the source code for Planet Node
 
 To run this on your own machine*:
